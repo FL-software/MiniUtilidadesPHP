@@ -6,8 +6,7 @@ div.flex-dashboard {
 }
 
 sidebar {
-    display: block;
-    height: 100%;
+    display: block;    
     background-color: rgb(36, 28, 202);
 }
 
@@ -21,7 +20,7 @@ sidebar .sidebar-title {
 }
 
 sidebar .sidebar-title img {
-    height: 40px;
+    height: 50px;
 }
 
 sidebar .sidebar-title h2 {
