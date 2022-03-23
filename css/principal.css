@@ -1,0 +1,34 @@
+#topo {
+    height: 95vh;
+}
+
+#fundo {
+    height: 5vh;
+}
+
+#esquerda {
+    width: 10%;
+    padding-right: 0;
+}
+
+#direita {
+    width: 90%;
+}
+
+#cabeca {
+    height: 8%;
+}
+
+#corpo {
+    height: 82%;
+}
+
+iframe{
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    overflow: hidden;
+}

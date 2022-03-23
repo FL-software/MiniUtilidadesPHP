@@ -1,0 +1,10 @@
+.main-lampada {
+    display: flex;
+    justify-content: center;
+}
+
+.button-lampada {
+    height: 30px; 
+    width: 120px;  
+    margin: 5px;
+}
