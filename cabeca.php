@@ -8,5 +8,8 @@
         <title>FL Software - Mini Utilidades - Cabeca</title>
     </head>
     <body>
-        <a href="index.html" style="color: black;">flsoft@gmail.com</a>
+        <?php
+            include "usuarioLogado.php";
+        ?>
+    </body>
 </html>
