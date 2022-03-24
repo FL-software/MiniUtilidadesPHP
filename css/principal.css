@@ -4,11 +4,12 @@
 
 #fundo {
     height: 5vh;
+    background-color: rgb(36, 28, 202);
 }
 
 #esquerda {
-    width: 14%;
-    padding-right: 0;
+    width: 30vh;
+    padding-right: 0px;
 }
 
 #direita {
@@ -17,6 +18,7 @@
 
 #cabeca {
     height: 8%;
+    background-color: rgb(36, 28, 202);
 }
 
 #corpo {
