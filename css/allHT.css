@@ -1,8 +1,8 @@
 @import '/fonts/fonts.css';
-@import 'reset.css';
-@import 'login.css';
-@import 'register.css';
-@import 'sidebar.css';
-@import 'header.css';
-@import 'main.css';
+@import 'resetHT.css';
+@import 'loginHT.css';
+@import 'registerHT.css';
+@import 'sidebarHT.css';
+@import 'headerHT.css';
+@import 'mainHT.css';
 @import 'perfil.css';
