@@ -15,7 +15,7 @@ $con=mysqli_connect("localhost","root","","mini_utilidades");
         session_start();
         $_SESSION['numLogin']=$num;
         $_SESSION['username']=$user;
-        header("Location:principal.html?num1=$num");
+        header("Location:../principal.html?num1=$num");
     }else{
         echo "ERRO no login<br/>";
         echo "<a href='index.html'>Efetuar login</a>";
