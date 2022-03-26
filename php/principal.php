@@ -13,6 +13,7 @@
         <?php
             include "verificaLogin.php";
         ?>
+        <img id="icone_menu" src="../img/menu.png" alt="">
         <div id="topo" class="row">
             <iframe name="cabeca" src="cabeca.php"></iframe>
         </div>
