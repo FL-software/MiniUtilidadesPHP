@@ -14,7 +14,7 @@
                 include "usuarioLogado.php";
             ?>
             <br/>
-            <a href="../index.html" target="_parent">Logout</a>
+            <a href="logout.php" target="_parent">Logout</a>
         </p>
     </body>
 </html>

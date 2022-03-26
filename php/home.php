@@ -10,7 +10,7 @@
     </head>
     <body>
         <h1>
-            <label>Bem Vindo</label>
+            <label>Bem Vindo </label>
             <?php
                 include "usuarioLogado.php";
             ?>

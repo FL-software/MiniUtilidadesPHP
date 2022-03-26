@@ -17,7 +17,7 @@
         header("Location:resetPassword.html?num1=$num");
     }else{
         echo "Não foi possível efetuar o login<br/>";
-        echo "<a href='confirmeEmail.html'>Confirmar e-mail</a>";
+        echo "<a href='confirmeEmail.html'>Tentar novamente</a>";
     }
 
     mysqli_close($con);

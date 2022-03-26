@@ -19,7 +19,7 @@
         header("Location:index.html?num1=$num");
     } else {
         echo "Não foi possível efetuar o login<br/>";
-        echo "<a href='register.html'>Efetuar cadastro</a>";
+        echo "<a href='register.html'>Tentar novamente</a>";
     }
 
     mysqli_close($con);

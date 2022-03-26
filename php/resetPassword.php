@@ -8,11 +8,11 @@
     $linha = mysqli_affected_rows($con);
 
     if ($linha > 0) {
-        echo "Senha atualizado com sucesso!<br/><br/>";
+        echo "Senha atualizada!<br/><br/>";
         echo "<a href='index.html'>Logar</a>";
     }else{
-        echo "Falha na atualização da senha<br/><br/>";
-        echo "<a href='resetPassword.html'>Voltar</a>";
+        echo "Não foi possível efetuar a atualização da senha<br/><br/>";
+        echo "<a href='resetPassword.html'>Tentar novamente</a>";
     }
 
     mysqli_close($con);

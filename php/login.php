@@ -15,10 +15,10 @@
         $_SESSION['numLogin'] = $num;
         $_SESSION['username'] = $user;
 
-        header("Location:../principal.html?num1=$num");
+        header("Location:principal.php?num1=$num");
     }else{
-        echo "ERRO no login<br/>";
-        echo "<a href='index.html'>Efetuar login</a>";
+        echo "Não foi possível efetuar o login<br/>";
+        echo "<a href='index.html'>Tentar novamente</a>";
     }
 
     mysqli_close($con);
