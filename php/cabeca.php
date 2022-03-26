@@ -12,9 +12,7 @@
         <?php
             include "usuarioLogado.php";
         ?>
-        <header>
-        <i id="iconMenu" onclick="responsiveSidebar()" class="fas fa-bars"></i>
-        <a href="index.html"> <i class="fas fa-sign-out-alt"></i> Logout</a>
-        </header>
+        <br/>
+        <a href="../index.html" target="_parent">Logout</a>
     </body>
 </html>
