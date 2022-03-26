@@ -28,5 +28,6 @@
         <div id="fundo" class="row">
             <iframe name="rodape" src="../rodape.html"></iframe>
         </div>
+	    <script src="../js/menu.js"></script>
     </body>
 </html>

@@ -14,7 +14,6 @@
 
 #direita {
     width: 80vh;
-    padding-left: 0;
 }
 
 #fundo {
@@ -35,4 +34,12 @@ body{
     top: 30px;
     left: 150px;
     width: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+.removePaddingLeft {
+    padding-left: 0;
 }
