@@ -9,12 +9,19 @@
         <title>FL Software - Mini Utilidades - Cabeca</title>
     </head>
     <body>
-        <p>
-            <?php
-                include "usuarioLogado.php";
-            ?>
-            <br/>
-            <a href="logout.php" target="_parent">Logout</a>
-        </p>
+        <div id="logo_topo">
+            <a href="home.php" target="corpo">
+                <img src="../img/LogoPequeno.jpeg" alt="">
+            </a>
+        </div>
+        <div id="usuario_topo">
+            <p>
+                <?php
+                    include "usuarioLogado.php";
+                ?>
+                <br/>
+                <a href="logout.php" target="_parent">Logout</a>
+            </p>
+        </div>
     </body>
 </html>

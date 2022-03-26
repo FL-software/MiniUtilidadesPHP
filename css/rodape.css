@@ -1,3 +1,7 @@
+body {
+    background-color: rgb(36, 28, 202);
+}
+
 p, a {
     color: #fff;
     text-align: center;

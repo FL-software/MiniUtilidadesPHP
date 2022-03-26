@@ -1,3 +1,10 @@
+body {    
+    background-color: rgb(36, 28, 202);    
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
 p, a {
     color: #fff;    
     text-align: right;
@@ -5,4 +12,9 @@ p, a {
 
 p {    
     padding-right: 10px;
+}
+
+img {    
+    padding-left: 35px;
+    padding-top: 5px;
 }

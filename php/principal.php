@@ -14,16 +14,14 @@
             include "verificaLogin.php";
         ?>
         <div id="topo" class="row">
+            <iframe name="cabeca" src="cabeca.php"></iframe>
+        </div>
+        <div id="meio" class="row">
             <div id="esquerda" class="col-md-auto">
                 <iframe name="menu" src="../menu.html"></iframe>
             </div>
             <div id="direita" class="col">
-                <div id="cabeca" class="row">
-                    <iframe name="cabeca" src="cabeca.php"></iframe>
-                </div>
-                <div id="corpo" class="row">
-                    <iframe name="corpo" src="home.php"></iframe>
-                </div>
+                <iframe name="corpo" src="home.php"></iframe>
             </div>
         </div>
         <div id="fundo" class="row">
