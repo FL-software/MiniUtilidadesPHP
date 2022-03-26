@@ -21,13 +21,13 @@
             <div id="esquerda" class="col-md-auto">
                 <iframe name="menu" src="../menu.html"></iframe>
             </div>
-            <div id="direita" class="col">
+            <div id="direita" class="col removePaddingLeft">
                 <iframe name="corpo" src="home.php"></iframe>
             </div>
         </div>
         <div id="fundo" class="row">
             <iframe name="rodape" src="../rodape.html"></iframe>
         </div>
-	    <script src="../js/menu.js"></script>
+	    <script src="../js/modificarMenu.js"></script>
     </body>
 </html>

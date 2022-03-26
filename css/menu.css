@@ -8,13 +8,13 @@ div.menu ul li {
     display: flex;
 }
 
-div.menu ul li a {
+div.menu ul li a, label, span {
     color: rgb(255, 255, 255);
     font-size: 12px;
     text-decoration: none;
     text-transform: uppercase;
 }
 
-div.menu ul li a:hover {
+div.menu ul li a:hover, label:hover, span:hover {
     color: rgb(255, 255, 0);
 }
