@@ -17,3 +17,9 @@ $("#sistemas_grupo").click(function(){
     $("#sistemas_itens").toggleClass("exibirSubMenu")
     $("#sistemas_seta").toggleClass("gira")
 })
+
+$("a").click(function(){
+    $("a").removeClass('ativo')
+    
+    $(this).toggleClass("ativo")
+})
