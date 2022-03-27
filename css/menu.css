@@ -3,18 +3,45 @@ body {
     overflow: hidden;
 }
 
-div.menu ul li {
-    padding: 10px 10px;
-    display: flex;
+div.menu ul {
+    list-style: none;
 }
 
-div.menu ul li a, label, span {
-    color: rgb(255, 255, 255);
-    font-size: 12px;
+div.menu ul li a, .grupo_menu {
+    color: rgb(220, 220, 200);
+    font-size: 15px;
     text-decoration: none;
     text-transform: uppercase;
+    padding-left: 5px;
+    display: block;
 }
 
-div.menu ul li a:hover, label:hover, span:hover {
-    color: rgb(255, 255, 0);
+div.menu ul li a{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+div.menu ul ul li a{
+    font-size: 12px;
+    background-color: rgb(26, 20, 141);
+}
+
+.grupo_menu {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+div.menu ul li a:hover, .grupo_menu:hover {
+    background-color: rgb(170, 170, 170);
+    color: rgb(36, 28, 202);
+}
+
+div.menu ul ul {
+    display: none;
+}
+
+.exibirSubMenu {
+    display: block !important; 
 }

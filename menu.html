@@ -13,9 +13,11 @@
         <div class="menu">
             <ul>
                 <li>
-                    <label>Calculadoras</label>
-                    <span class="material-icons">arrow_right</span>
-                    <ul>
+                    <div class="grupo_menu" id="calculadoras_grupo">
+                        <label>Calculadoras</label>
+                        <span class="material-icons">arrow_right</span>
+                    </div>
+                    <ul id="calculadoras_itens">
                         <li>
                             <a href="imc.html" target="corpo">Calculadora IMC</a>
                         </li>
@@ -37,9 +39,11 @@
                     </ul>
                 </li>
                 <li>
-                    <label>Lampadas</label>
-                    <span class="material-icons">arrow_right</span>
-                    <ul>
+                    <div class="grupo_menu" id="lampadas_grupo">
+                        <label>Lampadas</label>
+                        <span class="material-icons">arrow_right</span>
+                    </div>
+                    <ul id="lampadas_itens">
                         <li>
                             <a href="lampada.html" target="corpo"> </i>Lâmpada</a>
                         </li>
@@ -49,18 +53,22 @@
                     </ul>
                 </li>
                 <li>
-                    <label>Jogos</label>
-                    <span class="material-icons">arrow_right</span>
-                    <ul>
+                    <div class="grupo_menu" id="jogos_grupo">
+                        <label>Jogos</label>
+                        <span class="material-icons">arrow_right</span>
+                    </div>
+                    <ul id="jogos_itens">
                         <li>
                             <a href="genius.html" target="corpo">Genius</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <label>Sistemas</label>
-                    <span class="material-icons">arrow_right</span>
-                    <ul>
+                    <div class="grupo_menu" id="sistemas_grupo">
+                        <label>Sistemas</label>
+                        <span class="material-icons">arrow_right</span>
+                    </div>
+                    <ul id="sistemas_itens">
                         <li>
                             <a href="dashboard.html" target="corpo">Dashboard</a>
                         </li>
@@ -89,6 +97,7 @@
                 </li>                   
             </ul>
         </div>
-	    <script src="../js/menu.js"></script>
+        <script src="plugins/jquery/jquery.min.js"></script>
+	    <script src="js/menu.js"></script>
     </body>
 </html>
