@@ -22,6 +22,17 @@ div.menu ul li a{
     padding-bottom: 10px;
 }
 
+div.menu ul li div span{
+    font-size: 30px;
+    position: absolute;
+    right: 5px;
+}
+
+div.menu ul li div span.gira{
+    transform: rotate(90deg);
+    transition: 0.5s;
+}
+
 div.menu ul ul li a{
     font-size: 12px;
     background-color: rgb(26, 20, 141);
@@ -36,6 +47,7 @@ div.menu ul ul li a{
 div.menu ul li a:hover, .grupo_menu:hover {
     background-color: rgb(170, 170, 170);
     color: rgb(36, 28, 202);
+    transition: 0.5s;
 }
 
 div.menu ul ul {
