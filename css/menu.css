@@ -1,6 +1,7 @@
 body {
     background-color: rgb(36, 28, 202);
     overflow: hidden;
+    user-select: none;
 }
 
 div.menu ul {
@@ -48,6 +49,11 @@ div.menu ul li a:hover, .grupo_menu:hover {
     background-color: rgb(170, 170, 170);
     color: rgb(36, 28, 202);
     transition: 0.5s;
+    cursor: pointer;
+}
+
+.grupo_menu label:hover {
+    cursor: pointer;
 }
 
 div.menu ul ul {
