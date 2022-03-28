@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Invasores</title>
+        <link rel="stylesheet" href="../../css/all.css">
+        <link rel="stylesheet" href="../../css/jogos/invasores.css">
+    </head>
+    <body>
+        <h1>Invasores</h1>
+        <p>Pontos: <span id="pontos"></span></p>
+        <div id="grade"></div>
+        <div id="controles">
+            <img id="espaco" src="../../img/espaco.png" onclick="atirar()"></img>
+            <img id="esquerda" src="../../img/esquerda.png" onclick="moverJogador(null,'esquerda')"></img>
+            <img id="direita" src="../../img/direita.png" onclick="moverJogador(null,'direita')"></img>   
+        </div>
+        <div id="reiniciar" onclick="reiniciar();">Reiniciar</div>
+        <script src="../../js/jogos/invasores.js"></script>
+    </body>
+</html>
