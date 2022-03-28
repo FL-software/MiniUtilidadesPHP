@@ -1,19 +1,19 @@
 #topo {
-    height: 6vh;
+    height: 10vh;
     padding-right: 0;
 }
 
 #meio {
-    height: 90vh;
+    height: 85vh;
 }
 
 #esquerda {
-    width: 20vh;
+    width: 25vh;
     padding-right: 0;
 }
 
 #direita {
-    width: 80vh;
+    width: 75vh;
 }
 
 #fundo {
