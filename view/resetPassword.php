@@ -4,7 +4,7 @@
     $user  = $_POST['fmail'];      
     $senha = $_POST['fsenha'];
     $sql   = "UPDATE tb_login SET senha='$senha' WHERE username='$user'";
-    $res   = mysqli_query($con,$sql);
+    $res   = mysqli_query($con, $sql);
     $linha = mysqli_affected_rows($con);
 
     if ($linha > 0) {

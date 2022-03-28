@@ -4,7 +4,7 @@
     $nome  = $_POST['fnome'];
     $user  = $_POST['fmail'];
     $senha = $_POST['fsenha'];
-    $sql   = "INSERT INTO tb_login VALUES ('$nome', '$user', '$senha')";
+    $sql   = "INSERT INTO tb_login VALUES (NULL, '$nome', '$user', '$senha')";
     $res   = mysqli_query($con, $sql);
     $linha = mysqli_affected_rows($con);
 
