@@ -18,6 +18,32 @@ $("#sistemas_grupo").click(function(){
     $("#sistemas_seta").toggleClass("gira")
 })
 
+$("#php_grupo").click(function(){
+    $("#php_itens").toggleClass("exibirSubMenu")
+    $("#php_seta").toggleClass("gira")
+})
+
+$("#php_cfb_grupo").click(function(){
+    $("#php_cfb_itens").toggleClass("exibirSubMenu")
+    $("#php_cfb_seta").toggleClass("gira")
+})
+
+$("#php_cfb_leonardo_grupo").click(function(){
+    $("#php_cfb_leonardo_itens").toggleClass("exibirSubMenu")
+    $("#php_cfb_leonardo_seta").toggleClass("gira")
+})
+
+$("#php_faetec_grupo").click(function(){
+    $("#php_faetec_itens").toggleClass("exibirSubMenu")
+    $("#php_faetec_seta").toggleClass("gira")
+})
+
+$("#php_faetec_leonardo_grupo").click(function(){
+    $("#php_faetec_leonardo_itens").toggleClass("exibirSubMenu")
+    $("#php_faetec_leonardo_seta").toggleClass("gira")
+})
+
+
 $("a").click(function(){
     $("a").removeClass('ativo')
     
