@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Aventuras Fantásticas - A Cidadela do Caos</title>
+		<link rel='stylesheet' type='text/css' href='../../css/jogos/acidadela.css'/>
+		<script src="../../plugins/jquery/jquery.min.js"></script>
+        <script type="text/javascript" src="../../js/jogos/acidadela.js"></script>
+	</head>
+	<body>
+		<div id="cima">
+			<div id="cima-esquerda">
+				<div class="titulo">Aventuras Fantásticas : A Cidadela do Caos</div>
+				<div class="autor">Autor : Steve Jackson</div>
+ 				<div class="link">Livro disponível para compra em : <a href="http://www.estantevirtual.com.br/b/steve-jackson/a-cidadela-dos-								caos/3056861632" target="_blank">Estante Virtual</a></div>
+			</div>
+			<div id="cima-direita">
+				<div class="caixa-itens">
+					<div class="itens itens-valores">Nome:</div>
+					<div class="itens itens-valores">Habilidade:</div>
+					<div class="itens itens-valores">Energia:</div>
+					<div class="itens itens-valores">Sorte:</div>
+				</div>
+				<div class="caixa-itens">
+					<div class="valor-nome itens-valores contorno botaomenos">-</div>
+					<div class="valor-habilidade itens-valores contorno">0</div>
+					<div class="valor-energia itens-valores contorno">0</div>
+					<div class="valor-sorte itens-valores contorno">0</div>
+				</div>
+				<div class="caixa-itens">
+					<div class="itens itens-valores">Magia:</div>
+					<div class="itens itens-valores">Ouro:</div>
+					<div id="encantos" class="botao itens-valores">Encantos</div>
+					<div id="equipamentos" class="botao itens-valores">Itens</div>
+				</div>
+				<div class="caixa-itens">
+					<div class="valor-magia itens-valores contorno">0</div>
+					<div class="valor-ouro itens-valores contorno">0</div>
+					<div id="inimigos" class="botao itens-valores">Inimigos</div>
+					<div id="completo" class="botao itens-valores">Completo</div>
+				</div>
+			</div>
+		</div>
+		<div id="meio">
+			<div id="menu">
+				<div class="botao modoAventura itens-menu">Aventura</div>
+				<div class="botao modoLeitura itens-menu">Leitura</div>
+				<div class="botao modoDesenvolvedor itens-menu">Desenvolvedor</div>
+				<div class="botao novaAventura itens-menu mAventura mDesenvolvedor">Nova Aventura</div>
+				<div class="itens-menu contorno mAventura mLeitura mDesenvolvedor">Paginação</div>
+				<div id="paginacao" class="itens-menu contorno mLeitura mAventura mDesenvolvedor">0000 - 0001</div>
+				<div id="irPagina" class="botao itens-menu mLeitura mDesenvolvedor">Ir para a Página</div>
+				<div id="retornar" class="botao itens-menu mLeitura mDesenvolvedor">Retornar Página</div>
+				<div id="avancar" class="botao itens-menu mLeitura mDesenvolvedor">Avançar Página</div>
+				<div id="capa" class="botao itens-menu mLeitura mDesenvolvedor">Capa</div>
+				<div id="regras" class="botao itens-menu mLeitura mAventura mDesenvolvedor">Regras</div>
+				<div id="voltar" class="botao itens-menu mDesenvolvedor">Continuar Aventura</div>
+				<div class="itens-menu contorno mAventura mDesenvolvedor">Indice</div>
+				<div id="indice" class="itens-menu contorno mAventura mDesenvolvedor">0</div>
+				<div id="irIndice" class="botao itens-menu mDesenvolvedor">Ir para o Indice</div>
+				<div id="executar" class="botao itens-menu">Executar Indice</div>
+				<div id="opcao1" class="botao opcoes itens-menu">Opção 1</div>
+				<div id="opcao2" class="botao opcoes itens-menu">Opção 2</div>
+				<div id="opcao3" class="botao opcoes itens-menu">Opção 3</div>
+				<div id="opcao4" class="botao opcoes itens-menu">Opção 4</div>
+				<div id="opcao5" class="botao opcoes itens-menu">Opção 5</div>
+				<div id="rolar-1dado" class="botao dados itens-menu">Rolar um dado</div>
+				<div id="rolar-2dados" class="botao dados itens-menu">Rolar dois dados</div>
+				<div id="1dado-resultado" class="dados imgDados"><img id="img-1dado"src="../../img/dados/0.jpg"/></div>
+				<div id="2dado-resultado" class="dados imgDados"><img id="img-2dado"src="../../img/dados/0.jpg"/></div>
+			</div>
+			<div id="livro" class="conteudo">
+				<div id="loader"></div>
+				<div id="pagina-esquerda" class="paginas comecar"><img id="img-esquerda" src="../../img/acidadela/0000.jpg"/></div>
+				<div id="pagina-direita" class="paginas comecar"><img id="img-direita" src="../../img/acidadela/0001.jpg"/></div>
+			</div>
+			<div id="ficha" class="tamanho-conteudo ficha-completa">
+				<div class="titulo-ficha">Folha de Aventuras</div>
+				<div class="titulo-ficha valor-nome botaomenos">-</div>
+				<div class="caixa-ficha">
+					<div class="titulo-ficha">Habilidade</div>
+					<div class="itens-ficha itens">Atual:</div>
+					<div class="valores-ficha valor-habilidade">0</div>
+					<div class="itens-ficha itens">Inicial:</div>
+					<div class="valores-ficha inicial-habilidade">0</div>
+				</div>
+				<div class="caixa-ficha">
+					<div class="titulo-ficha">Energia</div>
+					<div class="itens-ficha itens">Atual:</div>
+					<div class="valores-ficha valor-energia">0</div>
+					<div class="itens-ficha itens">Inicial:</div>
+					<div class="valores-ficha inicial-energia">0</div>
+				</div>
+				<div class="caixa-ficha">
+					<div class="titulo-ficha">Sorte</div>
+					<div class="itens-ficha itens">Atual:</div>
+					<div class="valores-ficha valor-sorte">0</div>
+					<div class="itens-ficha itens">Inicial:</div>
+					<div class="valores-ficha inicial-sorte">0</div>
+				</div>
+				<div class="caixa-ficha">
+					<div class="titulo-ficha">Magia</div>
+					<div class="itens-ficha itens">Atual:</div>
+					<div class="valores-ficha valor-magia">0</div>
+					<div class="itens-ficha itens">Inicial:</div>
+					<div class="valores-ficha inicial-magia">0</div>
+				</div>
+				<div class="caixa-ficha">
+					<div class="titulo-ficha">Ouro</div>
+					<div class="itens-ficha itens">Atual:</div>
+					<div class="valores-ficha valor-ouro">0</div>
+					<div class="itens-ficha itens">Inicial:</div>
+					<div class="valores-ficha inicial-ouro">0</div>
+				</div>
+			</div>
+			<div id="ficha-encantos" class="caixa-maior-ficha ficha-completa">
+					<div class="titulo-ficha">Encantos Mágicos</div>
+					<div class="valores-maior-ficha">Encanto</div>
+					<div class="itens-maior-ficha">Qtd</div>
+					<div id="encanto-Copia" class="valores-maior-ficha">Cópia de Criatura</div>
+					<div id="qtd-Copia" class="itens-maior-ficha">0</div>
+					<div id="mais-Copia" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Copia" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Percepcao" class="valores-maior-ficha">Percepção Extra-Sensorial</div>	
+					<div id="qtd-Percepcao" class="itens-maior-ficha">0</div>
+					<div id="mais-Percepcao" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Percepcao" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Fogo" class="valores-maior-ficha">Fogo</div>
+					<div id="qtd-Fogo" class="itens-maior-ficha">0</div>
+					<div id="mais-Fogo" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Fogo" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Ouro" class="valores-maior-ficha">Ouro dos Tolos</div>
+					<div id="qtd-Ouro" class="itens-maior-ficha">0</div>
+					<div id="mais-Ouro" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Ouro" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Ilusao" class="valores-maior-ficha">Ilusão</div>
+					<div id="qtd-Ilusao" class="itens-maior-ficha">0</div>
+					<div id="mais-Ilusao" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Ilusao" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Levitacao" class="valores-maior-ficha">Levitação</div>
+					<div id="qtd-Levitacao" class="itens-maior-ficha">0</div>
+					<div id="mais-Levitacao" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Levitacao" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Escudo" class="valores-maior-ficha">Escudo</div>
+					<div id="qtd-Escudo" class="itens-maior-ficha">0</div>
+					<div id="mais-Escudo" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Escudo" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Forca" class="valores-maior-ficha">Força</div>
+					<div id="qtd-Forca" class="itens-maior-ficha">0</div>
+					<div id="mais-Forca" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Forca" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Fraqueza" class="valores-maior-ficha">Fraqueza</div>
+					<div id="qtd-Fraqueza" class="itens-maior-ficha">0</div>
+					<div id="mais-Fraqueza" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Fraqueza" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Sorte" class="valores-maior-ficha">Sorte</div>
+					<div id="qtd-Sorte" class="itens-maior-ficha">0</div>
+					<div id="mais-Sorte" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Sorte" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Habilidade" class="valores-maior-ficha">Habilidade</div>
+					<div id="qtd-Habilidade" class="itens-maior-ficha">0</div>
+					<div id="mais-Habilidade" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Habilidade" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Energia" class="valores-maior-ficha">Energia</div>
+					<div id="qtd-Energia" class="itens-maior-ficha">0</div>
+					<div id="mais-Energia" class="botao maismenos-encantos botaomais">+</div>
+					<div id="menos-Energia" class="botao maismenos-encantos botaomenos">-</div>
+					<div id="encanto-Total" class="valores-maior-ficha">Total</div>
+					<div id="qtd-Total" class="itens-maior-ficha">0</div>
+			</div>
+			<div id="ficha-equipamentos" class="caixa-maior-ficha ficha-completa">
+					<div class="ficha">Itens de Equipamentos Levados</div>
+					<div class="valores-maior-ficha">Item</div>
+					<div class="itens-maior-ficha">Qtd</div>
+					<div class="valores-maior-ficha espada0">Espada</div>
+					<div class="itens-maior-ficha espada0">1</div>
+					<div class="valores-maior-ficha">Armadura de Couro</div>
+					<div class="itens-maior-ficha">1</div>
+					<div class="valores-maior-ficha">Lanterna</div>
+					<div class="itens-maior-ficha">1</div>
+					<div class="valores-maior-ficha">Mochila</div>
+					<div class="itens-maior-ficha">1</div>
+					<div class="valores-maior-ficha pegavel adaga">Adaga de Arremesso Encantada, causa 2 de dano automático</div>
+					<div class="itens-maior-ficha pegavel adaga qtd-adaga">0</div>
+					<div class="valores-maior-ficha pegavel prata">Chave de Prata</div>
+					<div class="itens-maior-ficha pegavel prata qtd-prata">0</div>
+					<div class="valores-maior-ficha pegavel verde">Chave Verde Cintilante</div>
+					<div class="itens-maior-ficha pegavel verde qtd-verde">0</div>
+					<div class="valores-maior-ficha pegavel velo">Velo de Ouro</div>
+					<div class="itens-maior-ficha pegavel velo qtd-velo">0</div>
+					<div class="valores-maior-ficha pegavel punhado">Punhado de Pequenas Amoras</div>
+					<div class="itens-maior-ficha pegavel punhado qtd-punhado">0</div>
+					<div class="valores-maior-ficha pegavel vidro">Vidro contendo o Homem-Aranha</div>
+					<div class="itens-maior-ficha pegavel vidro qtd-vidro">0</div>
+					<div class="valores-maior-ficha pegavel escova">Escova de Cabelo Ornamentada</div>
+					<div class="itens-maior-ficha pegavel escova qtd-escova">0</div>
+					<div class="valores-maior-ficha pegavel essencia">Essência de Erva de Porco</div>
+					<div class="itens-maior-ficha pegavel essencia qtd-essencia">0</div>
+					<div class="valores-maior-ficha pegavel amuleto">Amuleto Encantado</div>
+					<div class="itens-maior-ficha pegavel amuleto qtd-amuleto">0</div>
+					<div class="valores-maior-ficha pegavel vinho">Vinho Encanto de Fogo</div>
+					<div class="itens-maior-ficha pegavel vinho qtd-vinho">0</div>
+					<div class="valores-maior-ficha pegavel espelho">Espelho de Prata</div>
+					<div class="itens-maior-ficha pegavel espelho qtd-espelho">0</div>
+					<div class="valores-maior-ficha pegavel miriade">Miríade de Bolso</div>
+					<div class="itens-maior-ficha pegavel miriade qtd-miriade">0</div>
+					<div class="valores-maior-ficha pegavel cobre">Chave de Cobre</div>
+					<div class="itens-maior-ficha pegavel cobre qtd-cobre">0</div>
+					<div class="valores-maior-ficha pegavel unguento">Vidro de Unguento</div>
+					<div class="itens-maior-ficha pegavel unguento qtd-unguento">0</div>
+					<div class="valores-maior-ficha pegavel espada4">Espada Solar + 4</div>
+					<div class="itens-maior-ficha pegavel espada4 qtd-espada4">0</div>
+					<div class="valores-maior-ficha pegavel espada1">Espada Mágica + 1</div>
+					<div class="itens-maior-ficha pegavel espada1 qtd-espada1">0</div>
+					<div class="valores-maior-ficha pegavel espada2">Espada Encantada + 2</div>
+					<div class="itens-maior-ficha pegavel espada2 qtd-espada2">0</div>
+					<div class="valores-maior-ficha pegavel escudo">Escudo de Armas Encantado, -2 Força de Ataque das criaturas</div>
+					<div class="itens-maior-ficha pegavel escudo qtd-escudo">0</div>
+			</div>
+			<div id="ficha-inimigos" class="tamanho-conteudo ficha-completa">
+				<div class="titulo-ficha">Quadro de Encontro com Inimigos</div>
+				<div class="caixa-inimigos-ficha inimigos gark0">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">GARK</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeGark0">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaGark0">11</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos fera">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">FERA DAS GARRAS</div>
+					<div class="itens-ficha itens habilidadeFera">Habilidade:</div>
+					<div class="valores-ficha">9</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaFera">14</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos aranha">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HOMEM-ARANHA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeAranha">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaAranha">5</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos cobra">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">COBRA DE ESGOTO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeCobra">6</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaCobra">7</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos gargula">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">GÁRGULA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeGargula">9</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaGargula">10</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos gark1">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">GARK</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeGark1">5</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaGark1">5</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos macaco">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">MACACO-CACHORRO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeMacaco">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaMacaco">4</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos cachorro">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">CACHORRO-MACACO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeCachorro">6</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaCachorro">6</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos golem">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">GOLEM</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeGolem">8</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaGolem">10</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos alto">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HOMEM ALTO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeAlto">8</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaAlto">8</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos baixo">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HOMEM BAIXO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeBaixo">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaBaixo">6</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos anao">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">ANÃO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habliadeAnao">5</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaAnao">6</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos goblin">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">GOBLIN</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habiladadeGoblin">6</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaGoblin">4</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos orca">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">ORCA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeOrca">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaOrca">5</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos primeiro">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">PRIMEIRO GIRA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadePrimeiroGIRA">7</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaPrimeiroGIRA">6</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos segundo">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">SEGUNDO GIRA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeSegundoGIRA">6</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaSegundoGIRA">5</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos calacorm">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">CALACORM</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeCalacorm">9</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaCalacorm">8</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos rino0">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HOMEM-RINO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeRino0">8</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaRino0">9</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos elfo0">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">ELFO NEGRO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeElfo0">8</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaElfo0">4</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos rino1">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HOMEM-RINO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeRino1">4</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaRino1">7</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos balthus">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">BALTHUS DIRE</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeBalthus">12</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaBalthus">19</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos hidra">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">HIDRA</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeHidra">10</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaHidra">17</div>
+				</div>
+				<div class="caixa-inimigos-ficha inimigos elfo1">
+					<div class="itens-ficha itens">Nome:</div>
+					<div class="valores-ficha">ELFO NEGRO</div>
+					<div class="itens-ficha itens">Habilidade:</div>
+					<div class="valores-ficha habilidadeElfo1">4</div>
+					<div class="itens-ficha itens">Energia:</div>
+					<div class="valores-ficha energiaElfo1">4</div>
+				</div>
+			</div>
+			<div id="confirmacao" class="tamanho-conteudo criacao">
+				<div id="mudarNome" class="botao criacao botao-ficha">Mudar Nome</div>
+				<div id="rolarNovamente" class="botao criacao botao-ficha">Rolar Dados Novamente Para Criar Personagem</div>
+				<div id="confirmarPersonagem" class="botao criacao botao-ficha">Confirmar Personagem</div>
+			</div>
+		</div>
+		<div id="baixo">
+			<div>Este site foi desenvolvido para praticar o conhecimento em Web Designer</div>
+			<div>© Copyright 2016 - Leonardo Maia</div>
+		</div>
+	</body>
+</html>

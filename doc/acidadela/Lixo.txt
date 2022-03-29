@@ -1,0 +1,414 @@
+function acontecerIndice_item_escolha() {
+	var texto = "Você deve escolher um item:";
+	var i = 1;
+	if ($('.qtd-adaga').text() === 1) {
+		texto += " ("+i+") Adaga de Arremesso Encantada, causa 2 de dano automático";
+		i++;
+	};
+	if ($('.qtd-prata').text() === 1) {
+		texto += " ("+i+") Chave de Prata";
+		i++;
+	};
+	if ($('.qtd-verde";
+		texto += " ("+i+") Chave Verde Cintilante";
+		i++;
+	};
+	if ($('.qtd-velo').text() === 1) {
+		texto += " ("+i+") Velo de Ouro";
+		i++;
+	};
+	if ($('.qtd-punhado').text() === 1) {
+		texto += " ("+i+") Punhado de Pequenas Amoras";
+		i++;
+		};
+	if ($('.qtd-vidro').text() === 1) {
+		texto += " ("+i+") Vidro contendo o Homem-Aranha";
+		i++;
+	};
+	if ($('.qtd-escova').text() === 1) {
+		texto += " ("+i+") Escova de Cabelo Ornamentada";
+		i++;
+	};
+	if ($('.qtd-essencia').text() === 1) {
+		texto += " ("+i+") Essência de Erva de Porco";
+		i++;
+	};
+	if ($('.qtd-amuleto').text() === 1) {
+		texto += " ("+i+") Amuleto Encantado";
+		i++;
+	};
+	if ($('.qtd-vinho').text() === 1) {
+		texto += " ("+i+") Vinho Encanto de Fogo";
+		i++;
+		};
+	if ($('.qtd-espelho').text() === 1) {
+		texto += " ("+i+") Espelho de Prata";
+		i++;
+	};
+	if ($('.qtd-miriade').text() === 1) {
+		texto += " ("+i+") Miríade de Bolso";
+		i++;
+	};
+	if ($('.qtd-cobre').text() === 1) {
+		texto += " ("+i+") Chave de Cobre";
+		i++;
+	};
+	if ($('.qtd-unguento').text() === 1) {
+		texto += " ("+i+") Vidro de Unguento";
+		i++;
+	};
+	if ($('.qtd-espada4').text() === 1) {
+		texto += " ("+i+") Espada Solar + 4";
+		i++;
+	};
+	if ($('.qtd-espada1').text() === 1) {
+		texto += " ("+i+") Espada Mágica + 1";
+		i++;
+	};
+	if ($('.qtd-espada2').text() === 1) {
+		texto += " ("+i+") Espada Encantada + 2";
+		i++;
+	};
+	if ($('.qtd-escudo').text() === 1) {
+		texto += " ("+i+") Escudo de Armas Encantado, -2 Força de Ataque das criaturas";
+		i++;
+	}; 
+	var opcaoItem = prompt(texto);
+	switch (opcaoItem) {
+    		case 1:
+			nomeItem = ""Adaga de Arremesso Encantada, causa 2 de dano automático";
+			break;
+    		case 2:
+			nomeItem = "Chave de Prata";
+			break;
+    		case 3:
+			nomeItem = "Chave Verde Cintilante";
+			break;
+    		case 4:
+			nomeItem = "Velo de Ouro";
+			break;
+    		case 5:
+			nomeItem = "Punhado de Pequenas Amoras";
+			break;
+    		case 6:
+			nomeItem = "Vidro contendo o Homem-Aranha";
+			break;
+    		case 7:
+			nomeItem = "Escova de Cabelo Ornamentada";
+			break;
+    		case 8:
+			nomeItem = "Essência de Erva de Porco";
+			break;
+    		case 9:
+			nomeItem = "Amuleto Encantado";
+			break;
+    		case 10:
+			nomeItem = "Vinho Encanto de Fogo";
+			break;
+    		case 11:
+			nomeItem = "Espelho de Prata";
+			break;
+    		case 12:
+			nomeItem = "Miríade de Bolso";
+			break;
+    		case 13:
+			nomeItem = "Chave de Cobre";
+			break;
+    		case 14:
+			nomeItem = "Vidro de Unguento";
+			break;
+    		case 15:
+			nomeItem = "Espada Solar + 4";
+			break;
+    		case 16:
+			nomeItem = "Espada Mágica + 1";
+			break;
+    		case 17:
+			nomeItem = "Espada Encantada + 2";
+			break;
+    		default:
+			nomeItem = "Escudo de Armas Encantado, -2 Força de Ataque das criaturas";
+			break;
+	};
+	acontecerIndice_item(acaoItem,nomeItem)
+};
+
+var valorHabilidade = 0; var valorEnergia = 0; var valorSorte = 0; var valorMagia = 0; var valorOuro = 0; 
+
+	$('.inicial-habilidade').text(rolarUmDado()+6); 	$('.valor-habilidade').text($('.inicial-habilidade').text());
+	$('.inicial-energia').text(rolarDoisDados()+12); 	$('.valor-energia').text($('.inicial-energia').text());
+	$('.inicial-sorte').text(rolarUmDado()+6); 	$('.valor-sorte').text($('.inicial-sorte').text());
+	$('.inicial-magia').text(rolarDoisDados()+6); 	$('.valor-magia').text($('.inicial-magia').text());
+	$('.inicial-ouro').text(0);	$('.valor-ouro').text($('.inicial-ouro').text());
+
+alert("Sua aventura chegou ao fim!");
+
+$('.imgDados').show();
+
+	alert(indiceAnterior);
+	if (bloqueio === "sim"){
+		alert ("Você ficou no indice "+indiceDestino+", devido a não possuir item, ouro ou encanto necessário para prosseguir!");
+	} else {
+		acontecerIndice(indiceDestino - 1);
+	};
+
+HTML
+<!-- Material para teste -->
+<ol>
+<li>lista ordenada</li>
+</ol>
+<ul>
+<li>lista não ordenada</li>
+</ul>
+<table>
+ <thead>
+  <tr>
+   <th colspan="6">Folha de Aventuras</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="2">Habilidade</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="2">Energia</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="2">Sorte</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="2">Sorte</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="3">Magia</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+   <td>
+    <table>
+     <thead>
+      <tr>
+       <th colspan="3">Ouro</th>
+      </tr>
+     </thead>
+     <tbody>
+      <tr>
+       <td>Inicial:</td>
+       <td>vazio</td>
+      </tr>
+      <tr>
+       <td>Atual:</td>
+       <td>vazio</td>
+      </tr>
+     </tbody>
+    </table>
+   </td>
+  </tr>
+  <tr>
+  </tr>
+         </tbody>
+</table>
+
+
+CSS
+
+/* Material para teste */
+
+h1 {
+font-family:Arial;
+font-weight: bold;
+font-size:40px;
+color:#8B1C62;
+}
+h2 {
+font-family:Verdana;
+font-weight: bold;
+color: #FF7256;
+}
+h3 {
+font-family:Impact;
+color:#cc00c0;
+}
+h4 {
+font-family:cursive;
+color:#36648b;
+}
+h5 {
+font-family: Futura;
+font-variant: small-caps;
+color: #FFC125;
+}
+h6 {
+font-family: Tahoma;
+color: #54FF9F;
+}
+p {
+font-family:Garamond;
+font-size:16px;
+color: #530EE8;
+}
+span {
+font-family: sans-serif;
+color: #8B668B;
+}
+strong {
+font-family:Courier;
+color: #8a2be2;
+}
+em {
+font-family: serif;
+color: #cc6666;
+}
+img {
+width:250px;
+height:350px;
+border: 1px solid #4682b4;
+box-shadow: rgba(0,0,0,0.2) 10px 10px;
+}
+a {
+color: #00cc00;
+text-decoration: none;
+}
+a:hover {
+color: #008b45;
+}
+a:link {
+color: #00ff00;
+}
+a:visited {
+color: #00FF00;
+}
+
+p:first-child {}
+p:nth-child(2) {}
+ol {
+margin: 1px 2px 3px 4px;
+}
+ul {
+list-style-type: none;
+}
+li {
+font-family: Vivaldi;
+border: 2px solid #000000;
+color: #ffffff;
+border-radius: 5px 5px;
+background-color: #cc0323;
+}
+table {
+border-collapse:collapse;
+}
+thead {}
+tbody {}
+tr {
+border-bottom:1px solid #3c4543;
+color: #576D94;
+}
+th {
+border-top-right: 1px dashed #70b8ff;
+color: #4A4943;
+}
+td {
+border-left:1px solid #cc0323;
+box-shadow: none;
+}
+
+SCRIPT
+
+$(document).ready(function() {
+   $('div').mouseenter(function() {
+       $(this).animate({
+           height: '+=10px'
+       });
+   });
+   $('div').mouseleave(function() {
+       $(this).animate({
+           height: '-=10px'
+       }); 
+   });
+   $('div').click(function() {
+       $(this).toggle(1000);
+   }); 
+});
+
+$(document).ready(function() {
+    $("div").fadeOut(1000);
+});

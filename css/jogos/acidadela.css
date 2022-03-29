@@ -1,0 +1,190 @@
+* {}
+body {
+	background-color: #000000;
+	font-family: Georgia;
+	font-weight: bold;
+	color: #F5F5F5;
+}
+div {
+	border-radius: 6px;
+	margin: 0.2%;
+	text-align: center;
+	font-size: 90%;
+}
+#cima {
+	width: 99%;
+	clear: both;
+	display: table;
+}
+#cima-esquerda {
+	width: 59%;
+	float: left;
+}
+.titulo {
+	font-family: Script;
+	font-size: 190%;
+}
+.autor {
+	font-family: Cursive;
+	font-size: 90%;
+}
+.link {
+	font-family: Cursive;
+	font-size: 60%;
+}
+#cima-direita {
+	width: 35%;
+	float: right;
+}
+.caixa-itens {
+	width: 19%;
+	display: inline-block;
+}
+.itens {
+	text-align: right;		
+}
+#meio {
+	width: 99%;
+	display: table;
+}
+.titulo-ficha {
+	float: both;
+}
+.caixa-ficha {
+	display: inline-block;
+	border: 1px solid #006400;
+}
+.caixa-maior-ficha {
+	width: 43%;
+	float: left;
+	border: 1px solid #006400;
+}
+.contorno {
+	border: 1px solid #006400;
+}
+.caixa-inimigos-ficha {
+	width: 32%;
+	float: left;
+	border: 1px solid #006400;
+}
+.itens-ficha {
+	width: 45%;
+	float: left;
+}
+.valores-ficha {
+	width: 45%;
+	float: right;
+	border: 1px solid #006400;
+}
+#ficha {
+	border: 1px solid #006400;
+}
+#ficha-inimigos {
+	border: 1px solid #006400;
+}
+.itens-maior-ficha {
+	width: 11%;
+	float: right;
+	border: 1px solid #006400;	
+}
+.maismenos-encantos {
+	width: 3%;
+	float: right;
+	margin-bottom: 1%
+	padding: 1%;
+}
+.valores-maior-ficha {
+	width: 74%;
+	float: left;
+	border: 1px solid #006400;
+}
+.tamanho-conteudo {
+	width: 87%;
+	display: table;
+	float: left;
+}
+.conteudo {
+	background-color: #FFFFFF;
+	width: 87%;
+	display: table;
+	float: left;
+}
+.paginas {
+	width: 89%;
+}
+#pagina-direita {
+	width: 48%;
+	float: right;
+}
+#pagina-esquerda {
+	width: 48%;
+	float: left;
+}
+#menu {
+	width: 10%;
+	float: right;
+}
+.botao-ficha {
+	clear: both;
+	padding: 1%
+}
+.itens-menu {
+	padding: 5%;
+	margin-bottom: 5%;
+}
+.itens-valores {
+	margin-bottom: 2%;
+}
+.botao {
+	text-align: center;
+	background-color: #B22222;
+	color: #FFC125;
+}
+.botao:hover {
+	background-color: #006400;
+}
+#baixo {
+	width: 99%;
+	clear: both;
+	display: table;
+	text-align: center;
+}
+img {
+	width: 95%;
+	margin: 1%;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.2) 5px 5px;
+	border: 1px solid #000000
+}
+a {
+	text-decoration: none;
+	color: #98FB98;
+}
+a:visited {
+	color: #87CEFA;
+}
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #006400;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
