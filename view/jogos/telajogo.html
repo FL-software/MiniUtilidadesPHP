@@ -1,0 +1,237 @@
+<!Doctype html>
+
+<html>
+
+  <head>
+  
+    <meta charset="UTF-8"/>
+   
+    <title>SD Combate</title>
+   
+    <link rel="stylesheet" href="../../css/jogos/sdcombate.css" type="text/css"/>
+   
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../js/jogos/sdcombate.js"></script>
+   
+  </head>
+
+  <body id="corpo">
+
+    <div class="jogador" id="jogadorA">
+      <center><img src="../../img/sdcombate/offline.png" align="middle" id="imgJogadorA" class="img_unidade"></center>
+      <center><div id="nomeJogadorA" class="bjogador">Entrar</div></center>
+      
+      <table class="tabelaUnidades" id="tabelaUnidadesA">
+        <tbody>
+        
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_bandeira.png" align="middle" id="ImgBandeiraJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Bandeira</td><td class="celulaUnidadePosicao" id="PosicaoBandeiraJogadorA">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_bomba.png" align="middle" id="ImgBombaJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Bomba</td><td class="celulaUnidadePosicao" id="PosicaoBombaJogadorA">0,0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_espiao.png" align="middle" id="ImgEspiaoJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Espiao</td><td class="celulaUnidadePosicao" id="PosicaoEspiaoJogadorA">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_soldado.png" align="middle" id="ImgSoldadoJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Soldado</td><td class="celulaUnidadePosicao" id="PosicaoSoldadoJogadorA">0,0,0,0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_cabo_armeiro.png" align="middle" id="ImgCabo_armeiroJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Cabo-armeiro</td><td class="celulaUnidadePosicao" id="PosicaoCabo_armeiroJogadorA">0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_sargento.png" align="middle" id="ImgSargentoJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Sargento</td><td class="celulaUnidadePosicao" id="PosicaoSargentoJogadorA">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_tenente.png" align="middle" id="ImgTenenteJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Tenente</td><td class="celulaUnidadePosicao" id="PosicaoTenenteJogadorA">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_capitao.png" align="middle" id="ImgCapitaoJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Capitao</td><td class="celulaUnidadePosicao" id="PosicaoCapitaoJogadorA">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_major.png" align="middle" id="ImgMajorJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Major</td><td class="celulaUnidadePosicao" id="PosicaoMajorJogadorA">0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_coronel.png" align="middle" id="ImgCoronelJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Coronel</td><td class="celulaUnidadePosicao" id="PosicaoCoronelJogadorA">0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_general.png" align="middle" id="ImgGeneralJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">General</td><td class="celulaUnidadePosicao" id="PosicaoGeneralJogadorA">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_marechal.png" align="middle" id="ImgMarechalJogadorA" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Marechal</td><td class="celulaUnidadePosicao" id="PosicaoMarechalJogadorA">0</td></tr>
+          
+        </tbody>
+      </table>
+      
+    </div>
+
+    <div class="jogador" id="jogadorB">
+      <center><img src="../../img/sdcombate/offline.png" align="middle" id="imgJogadorB" class="img_unidade"></center>
+      <center><div id="nomeJogadorB" class="bjogador">Entrar</div></center>
+      
+      <table class="tabelaUnidades" id="tabelaUnidadesB">
+        <tbody>
+        
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_bandeira.png" align="middle" id="ImgBandeiraJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Bandeira</td><td class="celulaUnidadePosicao" id="PosicaoBandeiraJogadorB">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_bomba.png" align="middle" id="ImgBombaJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Bomba</td><td class="celulaUnidadePosicao" id="PosicaoBombaJogadorB">0,0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_espiao.png" align="middle" id="ImgEspiaoJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Espiao</td><td class="celulaUnidadePosicao" id="PosicaoEspiaoJogadorB">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_soldado.png" align="middle" id="ImgSoldadoJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Soldado</td><td class="celulaUnidadePosicao" id="PosicaoSoldadoJogadorB">0,0,0,0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_cabo_armeiro.png" align="middle" id="ImgCabo_armeiroJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Cabo-armeiro</td><td class="celulaUnidadePosicao" id="PosicaoCabo_armeiroJogadorB">0,0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_sargento.png" align="middle" id="ImgSargentoJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Sargento</td><td class="celulaUnidadePosicao" id="PosicaoSargentoJogadorB">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_tenente.png" align="middle" id="ImgTenenteJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Tenente</td><td class="celulaUnidadePosicao" id="PosicaoTenenteJogadorB">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_capitao.png" align="middle" id="ImgCapitaoJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Capitao</td><td class="celulaUnidadePosicao" id="PosicaoCapitaoJogadorB">0,0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_major.png" align="middle" id="ImgMajorJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Major</td><td class="celulaUnidadePosicao" id="PosicaoMajorJogadorB">0,0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_coronel.png" align="middle" id="ImgCoronelJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Coronel</td><td class="celulaUnidadePosicao" id="PosicaoCoronelJogadorB">0,0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_general.png" align="middle" id="ImgGeneralJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">General</td><td class="celulaUnidadePosicao" id="PosicaoGeneralJogadorB">0</td></tr>
+          <tr><td class="celulaUnidadeImg"><img src="../../img/sdcombate/off_marechal.png" align="middle" id="ImgMarechalJogadorB" class="imgUnidade"></td>
+            <td class="celulaUnidadeNome">Marechal</td><td class="celulaUnidadePosicao" id="PosicaoMarechalJogadorB">0</td></tr>
+          
+        </tbody>
+      </table>
+      
+    </div>
+      
+    <table id="tPrinc">
+      <tbody>
+
+        <tr id="linha0">
+          <td class="celula celulaJogadorA" id="A0">A0</td>
+          <td class="celula celulaJogadorA" id="B0">B0</td>
+          <td class="celula celulaJogadorA" id="C0">C0</td>
+          <td class="celula celulaJogadorA" id="D0">D0</td>
+          <td class="celula celulaMeio" id="E0">E0</td>
+          <td class="celula celulaMeio" id="F0">F0</td>
+          <td class="celula celulaJogadorB" id="G0">G0</td>
+          <td class="celula celulaJogadorB" id="H0">H0</td>
+          <td class="celula celulaJogadorB" id="I0">I0</td>
+          <td class="celula celulaJogadorB" id="J0">J0</td>
+        </tr>
+
+        <tr id="linha1">
+          <td class="celula celulaJogadorA" id="A1">A1</td>
+          <td class="celula celulaJogadorA" id="B1">B1</td>
+          <td class="celula celulaJogadorA" id="C1">C1</td>
+          <td class="celula celulaJogadorA" id="D1">D1</td>
+          <td class="celula celulaMeio" id="E1">E1</td>
+          <td class="celula celulaMeio" id="F1">F1</td>
+          <td class="celula celulaJogadorB" id="G1">G1</td>
+          <td class="celula celulaJogadorB" id="H1">H1</td>
+          <td class="celula celulaJogadorB" id="I1">I1</td>
+          <td class="celula celulaJogadorB" id="J1">J1</td>
+        </tr>
+
+        <tr id="linha2">
+          <td class="celula celulaJogadorA" id="A2">A2</td>
+          <td class="celula celulaJogadorA" id="B2">B2</td>
+          <td class="celula celulaJogadorA" id="C2">C2</td>
+          <td class="celula celulaJogadorA" id="D2">D2</td>
+          <td class="celula celulaMeio" id="E2">E2</td>
+          <td class="celula celulaMeio" id="F2">F2</td>
+          <td class="celula celulaJogadorB" id="G2">G2</td>
+          <td class="celula celulaJogadorB" id="H2">H2</td>
+          <td class="celula celulaJogadorB" id="I2">I2</td>
+          <td class="celula celulaJogadorB" id="J2">J2</td>
+        </tr>
+
+        <tr id="linha3">
+          <td class="celula celulaJogadorA" id="A3">A3</td>
+          <td class="celula celulaJogadorA" id="B3">B3</td>
+          <td class="celula celulaJogadorA" id="C3">C3</td>
+          <td class="celula celulaJogadorA" id="D3">D3</td>
+          <td class="celula celulaMeio" id="E3">E3</td>
+          <td class="celula celulaMeio" id="F3">F3</td>
+          <td class="celula celulaJogadorB" id="G3">G3</td>
+          <td class="celula celulaJogadorB" id="H3">H3</td>
+          <td class="celula celulaJogadorB" id="I3">I3</td>
+          <td class="celula celulaJogadorB" id="J3">J3</td>
+        </tr>
+
+        <tr id="linha4">
+          <td class="celula celulaJogadorA" id="A4">A4</td>
+          <td class="celula celulaJogadorA" id="B4">B4</td>
+          <td class="celula celulaJogadorA" id="C4">C4</td>
+          <td class="celula celulaJogadorA" id="D4">D4</td>
+          <td class="celula celulaMeio" id="E4">E4</td>
+          <td class="celula celulaMeio" id="F4">F4</td>
+          <td class="celula celulaJogadorB" id="G4">G4</td>
+          <td class="celula celulaJogadorB" id="H4">H4</td>
+          <td class="celula celulaJogadorB" id="I4">I4</td>
+          <td class="celula celulaJogadorB" id="J4">J4</td>
+        </tr>
+
+        <tr id="linha5">
+          <td class="celula celulaJogadorA" id="A5">A5</td>
+          <td class="celula celulaJogadorA" id="B5">B5</td>
+          <td class="celula celulaJogadorA" id="C5">C5</td>
+          <td class="celula celulaJogadorA" id="D5">D5</td>
+          <td class="celula celulaMeio" id="E5">E5</td>
+          <td class="celula celulaMeio" id="F5">F5</td>
+          <td class="celula celulaJogadorB" id="G5">G5</td>
+          <td class="celula celulaJogadorB" id="H5">H5</td>
+          <td class="celula celulaJogadorB" id="I5">I5</td>
+          <td class="celula celulaJogadorB" id="J5">J5</td>
+        </tr>
+
+        <tr id="linha6">
+          <td class="celula celulaJogadorA" id="A6">A6</td>
+          <td class="celula celulaJogadorA" id="B6">B6</td>
+          <td class="celula celulaJogadorA" id="C6">C6</td>
+          <td class="celula celulaJogadorA" id="D6">D6</td>
+          <td class="celula celulaMeio" id="E6">E6</td>
+          <td class="celula celulaMeio" id="F6">F6</td>
+          <td class="celula celulaJogadorB" id="G6">G6</td>
+          <td class="celula celulaJogadorB" id="H6">H6</td>
+          <td class="celula celulaJogadorB" id="I6">I6</td>
+          <td class="celula celulaJogadorB" id="J6">J6</td>
+        </tr>
+
+        <tr id="linha7">
+          <td class="celula celulaJogadorA" id="A7">A7</td>
+          <td class="celula celulaJogadorA" id="B7">B7</td>
+          <td class="celula celulaJogadorA" id="C7">C7</td>
+          <td class="celula celulaJogadorA" id="D7">D7</td>
+          <td class="celula celulaMeio" id="E7">E7</td>
+          <td class="celula celulaMeio" id="F7">F7</td>
+          <td class="celula celulaJogadorB" id="G7">G7</td>
+          <td class="celula celulaJogadorB" id="H7">H7</td>
+          <td class="celula celulaJogadorB" id="I7">I7</td>
+          <td class="celula celulaJogadorB" id="J7">J7</td>
+        </tr>
+
+        <tr id="linha8">
+          <td class="celula celulaJogadorA" id="A8">A8</td>
+          <td class="celula celulaJogadorA" id="B8">B8</td>
+          <td class="celula celulaJogadorA" id="C8">C8</td>
+          <td class="celula celulaJogadorA" id="D8">D8</td>
+          <td class="celula celulaMeio" id="E8">E8</td>
+          <td class="celula celulaMeio" id="F8">F8</td>
+          <td class="celula celulaJogadorB" id="G8">G8</td>
+          <td class="celula celulaJogadorB" id="H8">H8</td>
+          <td class="celula celulaJogadorB" id="I8">I8</td>
+          <td class="celula celulaJogadorB" id="J8">J8</td>
+        </tr>
+
+        <tr id="linha9">
+          <td class="celula celulaJogadorA" id="A9">A9</td>
+          <td class="celula celulaJogadorA" id="B9">B9</td>
+          <td class="celula celulaJogadorA" id="C9">C9</td>
+          <td class="celula celulaJogadorA" id="D9">D9</td>
+          <td class="celula celulaMeio" id="E9">E9</td>
+          <td class="celula celulaMeio" id="F9">F9</td>
+          <td class="celula celulaJogadorB" id="G9">G9</td>
+          <td class="celula celulaJogadorB" id="H9">H9</td>
+          <td class="celula celulaJogadorB" id="I9">I9</td>
+          <td class="celula celulaJogadorB" id="J9">J9</td>
+        </tr>
+
+      </tbody>
+    </table>
+    
+    <div id="help">
+      <a href="regras.html" target="_blank"><img id="himg" src="../../img/sdcombate/regras.png"/></a>
+      <p id="htext"><a href="regras.html" target="_blank">Regras do jogo</a> - SD Combate - Desenvolvido por: Daniel Santos, Flavio Santana e <a href="http://leonardojgmaia.wixsite.com/curriculo" target="_blank">Leonardo Maia</a></p>
+    </div>
+    
+  </body>
+
+</html>
