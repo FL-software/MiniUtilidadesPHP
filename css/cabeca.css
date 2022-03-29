@@ -3,6 +3,8 @@ body {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    
+    padding-top: 15px;
 }
 
 p, a {
@@ -17,4 +19,8 @@ p {
 img {    
     padding-left: 15px;
     padding-top: 5px;
+}
+
+#usuario_topo{
+    padding-right: 10px;
 }
