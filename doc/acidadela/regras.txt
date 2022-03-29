@@ -1,70 +1,70 @@
 $ Ficha personagem $
-[Nome jogador] = # entrada no formul·rio
+[Nome jogador] = # entrada no formul√°rio
 [Habilidade jogador] = <um dado> + {seis}
 [Energia jogador] = <dois dados> + {doze}
 [Sorte] = <um dado> + {seis}
 [Magia] = <dois dados> + {seis}
 [encantos] = escolher a quantidade de acordo com [magia]
-# os bonus nunca podem exceder as informaÁıes iniciais, ao menos que a pagina fale para exceder
+# os bonus nunca podem exceder as informa√ß√µes iniciais, ao menos que a pagina fale para exceder
 
 $ Combate $
-# lanÁar informaÁ„o da criatura no [inimigos encontrados]
-forÁa de ataque da criatura = <dois dados> + indice [Habilidade criatura]
-forÁa de ataque do jogador = <dois dados> + indice atual de [Habilidade jogador]
-subtrai {dois} da [Energia jogador ou criatura] devido ao dano para quem tiver a menor forÁa de ataque, comeÁa nova rodada # pode usar [Sorte]
+# lan√ßar informa√ß√£o da criatura no [inimigos encontrados]
+for√ßa de ataque da criatura = <dois dados> + indice [Habilidade criatura]
+for√ßa de ataque do jogador = <dois dados> + indice atual de [Habilidade jogador]
+subtrai {dois} da [Energia jogador ou criatura] devido ao dano para quem tiver a menor for√ßa de ataque, come√ßa nova rodada # pode usar [Sorte]
 ou
-se for igual nada acontece, comeÁa nova rodada
-repetir atÈ zerar a [Energia jogador] (morte)
+se for igual nada acontece, come√ßa nova rodada
+repetir at√© zerar a [Energia jogador] (morte)
 
 $ Fuga $ # quando a pagina permitir
 subtrai {dois} da [Energia jogador] pela covardia # pode usar [Sorte]
 
 $ Sorte $
-<dois dados> se for menor ou igual ao indice [Sorte jogador] obteve exito, se n„o consequÍncias
+<dois dados> se for menor ou igual ao indice [Sorte jogador] obteve exito, se n√£o consequ√™ncias
 subtrai {um} do indice de [Sorte jogador]
 	$ Testar a sua sorte $
-	# descrito em cada p·gina
+	# descrito em cada p√°gina
 	$ Sorte em batalha $
-	teve [Sorte] no dano a criatura, subtrai {quatro} ao invÈs de {dois} a [Energia critatura], se n„o, subtrai {um} a [Energia critatura]	
-	teve [Sorte] no dano ao jogador, subtrai {um} ao invÈs de {dois} a [Energia jogador], se n„o, subtrai {trÍs} a [Energia jogador]
+	teve [Sorte] no dano a criatura, subtrai {quatro} ao inv√©s de {dois} a [Energia critatura], se n√£o, subtrai {um} a [Energia critatura]	
+	teve [Sorte] no dano ao jogador, subtrai {um} ao inv√©s de {dois} a [Energia jogador], se n√£o, subtrai {tr√™s} a [Energia jogador]
 
 $ Modificadores [Habilidade, Energia e Sorte] $ # o indice inicial somente pode ser ultrapassado se a pagina solicitar que ocorra
 [Habilidade]
-# somente uma arma m·gica por vez 
+# somente uma arma m√°gica por vez 
 # pode ser recuperado com [Encanto da Habilidade]
 [Energia]
 # pode ser recuperado com [Encanto da Energia]
 [Sorte]
-# pode ser recuperado pelas p·ginas
+# pode ser recuperado pelas p√°ginas
 # pode ser recuperado com [Encanto da Sorte]
 
 $ Magia $
 [magia] = quantidade de encantos que o jogador pode escolher
-# se usar um encanto, mesmo que n„o tenha efeito, ele È subtraÌdo
-	[CÛpia de Criatura]
-	# copia a criatura que est· lutando, luta contra a original
-	[PercepÁ„o Extra-Sensorial]
-	# de acordo com a p·gina
+# se usar um encanto, mesmo que n√£o tenha efeito, ele √© subtra√≠do
+	[C√≥pia de Criatura]
+	# copia a criatura que est√° lutando, luta contra a original
+	[Percep√ß√£o Extra-Sensorial]
+	# de acordo com a p√°gina
 	[Fogo]
-	# de acordo com a p·gina 
+	# de acordo com a p√°gina 
 	[Ouro dos Tolos]
-	# de acordo com a p·gina 
-	[Ilus„o]
-	# de acordo com a p·gina 
-	[LevitaÁ„o]
-	# de acordo com a p·gina 
+	# de acordo com a p√°gina 
+	[Ilus√£o]
+	# de acordo com a p√°gina 
+	[Levita√ß√£o]
+	# de acordo com a p√°gina 
 	[Sorte]
-	# recupera metade do seu indice [Sorte] truncado, n„o ultrapassa o inicial, a qualquer momento, n„o pode ser usado em batalha
+	# recupera metade do seu indice [Sorte] truncado, n√£o ultrapassa o inicial, a qualquer momento, n√£o pode ser usado em batalha
 	[Escudo]
-	# de acordo com a p·gina 
+	# de acordo com a p√°gina 
 	[Habilidade]
-	# recupera metade do seu indice [Habilidade jogador] truncado, n„o ultrapassa o inicial, a qualquer momento, n„o pode ser usado em batalha
+	# recupera metade do seu indice [Habilidade jogador] truncado, n√£o ultrapassa o inicial, a qualquer momento, n√£o pode ser usado em batalha
 	[Energia]
-	# recupera metade do seu indice [Energia jogador] truncado, n„o ultrapassa o inicial, a qualquer momento, n„o pode ser usado em batalha
-	[ForÁa]
-	# de acordo com a p·gina
+	# recupera metade do seu indice [Energia jogador] truncado, n√£o ultrapassa o inicial, a qualquer momento, n√£o pode ser usado em batalha
+	[For√ßa]
+	# de acordo com a p√°gina
 	[Fraqueza]
-	# de acordo com a p·gina
+	# de acordo com a p√°gina
 
 $ Equipamento $
 inicia com [espada], [armadura de couro], [lanterna], [mochila]
@@ -79,34 +79,34 @@ inicia com [espada], [armadura de couro], [lanterna], [mochila]
 005 jogo-faca          & jogo especial
 
 006 encanto            - nome do encanto
-007 encanto-atributo   - nome do encanto - aÁ„o                - nome atributo - quantidade
-008 encanto-item       - nome do encanto - aÁ„o                - nome do item
+007 encanto-atributo   - nome do encanto - a√ß√£o                - nome atributo - quantidade
+008 encanto-item       - nome do encanto - a√ß√£o                - nome do item
 009 encanto-luta       - nome do encanto - nome criatura       - habilidade - energia
-010 encanto-luta-atri  - nome do encanto - nome criatura       - habilidade - energia - aÁ„o - nome atributo - quantidade
+010 encanto-luta-atri  - nome do encanto - nome criatura       - habilidade - energia - a√ß√£o - nome atributo - quantidade
 011 encanto-luta-enca  - nome do encanto - nome criatura       - habilidade - energia - nome do encanto - quantidade reduzir habilidade criatura
 012 encanto-luta-dupla - nome do encanto - nome criatura       - habilidade - energia - nome criatura - habilidade - energia
 013 encanto-teste      - nome do encanto - atributo teste      - opcao unica sucesso - opcao unica falha
 014 encanto-sala       - nome do encanto - atributo teste      - acao - nome atributo - quantidade $ "fim"
-015 encanto-porta      - nome do encanto % condiÁ„o            - opcao extra - aÁ„o - nome atributo - quantidade
+015 encanto-porta      - nome do encanto % condi√ß√£o            - opcao extra - a√ß√£o - nome atributo - quantidade
 
 016 teste              - atributo teste  - opcao unica sucesso - opcao unica falha
 017 teste-anel         - atributo teste  - "com anel"          - "sem anel"
-018 teste-atributo     - atributo teste  - aÁ„o                - atributo - quantidade
-019 teste-especial     - atributo teste  - opcao extra         - aÁ„o - nome atributo - quantidade
-020 teste-carne        - atributo teste  % condicao            - aÁ„o - nome atributo - quantidade      $ "fim" (se os trÍs acertarem)
-021 teste-porta        - atributo teste  - opcao extra         - aÁ„o - nome atributo - quantidade
+018 teste-atributo     - atributo teste  - a√ß√£o                - atributo - quantidade
+019 teste-especial     - atributo teste  - opcao extra         - a√ß√£o - nome atributo - quantidade
+020 teste-carne        - atributo teste  % condicao            - a√ß√£o - nome atributo - quantidade      $ "fim" (se os tr√™s acertarem)
+021 teste-porta        - atributo teste  - opcao extra         - a√ß√£o - nome atributo - quantidade
 
-022 item               - aÁ„o            - nome do item
-023 item-duplo         - aÁ„o            - nome do item        - aÁ„o - nome do item
-024 item-teste         - aÁ„o            - nome do item        - atributo - aÁ„o - nome do item
-025 item-laco          - aÁ„o            - nome do item        - condicao - opcao unica sucesso - opcao unica falha
-026 item-atributo      - aÁ„o            - nome do item        - aÁ„o - atributo - quantidade
-027 item-escolha       - aÁ„o            * escolha do usu·rio
+022 item               - a√ß√£o            - nome do item
+023 item-duplo         - a√ß√£o            - nome do item        - a√ß√£o - nome do item
+024 item-teste         - a√ß√£o            - nome do item        - atributo - a√ß√£o - nome do item
+025 item-laco          - a√ß√£o            - nome do item        - condicao - opcao unica sucesso - opcao unica falha
+026 item-atributo      - a√ß√£o            - nome do item        - a√ß√£o - atributo - quantidade
+027 item-escolha       - a√ß√£o            * escolha do usu√°rio
 
 028 luta               - nome criatura   - habilidade          - energia
 029 luta-elfo          - nome criatura   - habilidade          - energia - nome do encanto - quantidade reduzir habilidade criatura - nome do encanto
-030 luta-atributo      - nome criatura   - habilidade          - energia - aÁ„o - atributo - quantidade 
-031 luta-fugir         - nome criatura   - habilidade          - energia % condicao - opÁao extra & pode usar a sorte para n„o se ferir na fuga
+030 luta-atributo      - nome criatura   - habilidade          - energia - a√ß√£o - atributo - quantidade 
+031 luta-fugir         - nome criatura   - habilidade          - energia % condicao - op√ßao extra & pode usar a sorte para n√£o se ferir na fuga
 032 luta-anel          - nome criatura   - habilidade          - energia % condicao - quantidade reduzir habilidade criatura 
 033 luta-especial      - nome criatura   - habilidade          - energia % condicao - opcao unica falha
 034 luta-tentaculo     - nome criatura   - habilidade          - energia % condicao $ "fim"
@@ -115,35 +115,35 @@ inicia com [espada], [armadura de couro], [lanterna], [mochila]
 037 luta-dupla         - nome criatura   - habilidade          - energia - nome criatura - habilidade - energia
 038 luta-aliado        - nome criatura   - habilidade          - energia - nome criatura - habilidade - energia
 039 luta-tripla        - nome criatura   - habilidade          - energia - nome criatura - habilidade - energia - nome criatura - habilidade - energia
-040 luta-item          - nome criatura   - habilidade          - energia - aÁ„o - nome do item  
+040 luta-item          - nome criatura   - habilidade          - energia - a√ß√£o - nome do item  
 
-041 atributo           - aÁ„o            - nome atributo       - quantidade("tudo")
-042 atributo-teste     - aÁ„o            - nome atributo       - quantidade - atributo teste - opcao unica sucesso - opcao unica falha
-043 atributo-item      - aÁ„o            - nome atributo       - quantidade - aÁ„o - nome do item
-044 atributo-itens     - aÁ„o            - nome atributo       - quantidade - aÁ„o - nome do item - aÁ„o - nome do item - aÁ„o - nome do item
-045 atributo-escolha   - aÁ„o            - nome atributo
-046 atributo-duplo     - aÁ„o            - nome atributo       - quantidade("tudo") - aÁ„o - nome atributo - quantidade("tudo")
-047 atributo-triplo    - aÁ„o            - nome atributo       - quantidade - aÁ„o - nome atributo - quantidade - aÁ„o - nome atributo - quantidade
+041 atributo           - a√ß√£o            - nome atributo       - quantidade("tudo")
+042 atributo-teste     - a√ß√£o            - nome atributo       - quantidade - atributo teste - opcao unica sucesso - opcao unica falha
+043 atributo-item      - a√ß√£o            - nome atributo       - quantidade - a√ß√£o - nome do item
+044 atributo-itens     - a√ß√£o            - nome atributo       - quantidade - a√ß√£o - nome do item - a√ß√£o - nome do item - a√ß√£o - nome do item
+045 atributo-escolha   - a√ß√£o            - nome atributo
+046 atributo-duplo     - a√ß√£o            - nome atributo       - quantidade("tudo") - a√ß√£o - nome atributo - quantidade("tudo")
+047 atributo-triplo    - a√ß√£o            - nome atributo       - quantidade - a√ß√£o - nome atributo - quantidade - a√ß√£o - nome atributo - quantidade
 
-048 modificador        - aÁ„o            - nome atributo       - quantidade - nome do encanto
+048 modificador        - a√ß√£o            - nome atributo       - quantidade - nome do encanto
 
-049 facadas            - aÁ„o            - nome atributo       * dado (1,2 ou 3) x 2
+049 facadas            - a√ß√£o            - nome atributo       * dado (1,2 ou 3) x 2
 
-050 fruta              - aÁ„o            - nome atributo       - quantidade * n„o pode usar encanto
+050 fruta              - a√ß√£o            - nome atributo       - quantidade * n√£o pode usar encanto
 
 051 se                 % encanto
 
 Funcionamento do jogo escolha de seis (indice 171, pagina 56):
 
-se tiver ouro È obrigatÛrio jogar
-ao menos 1 peÁa de ouro
-encanto ouro do tolo vale 10 peÁas
-rolar um dado, se acerta o premio È 5x a aposta
+se tiver ouro √© obrigat√≥rio jogar
+ao menos 1 pe√ßa de ouro
+encanto ouro do tolo vale 10 pe√ßas
+rolar um dado, se acerta o premio √© 5x a aposta
 
-Funcionamento do jogo Pedra M·gica (indice 278, pagina 84):
+Funcionamento do jogo Pedra M√°gica (indice 278, pagina 84):
 
-È obrigatÛrio jogar uma vez
-ganhar 36 peÁas de ouro
+√© obrigat√≥rio jogar uma vez
+ganhar 36 pe√ßas de ouro
 perder retira 2 de habilidade e 4 de energia
 um dado pelo numero de jogadores
 dois dados, se maior que 12 o jogador da roda perde, se menor que 12 passa para o proximo e diminui para 11 o limite, se for igual ao limite repete-se a jogada
@@ -151,11 +151,11 @@ depois que a pedra explode o limite retorna a 12 sem o jogador em que a pedra ex
 
 Funcionamento do jogo Faca-Faquinha (indice 365, pagina 108):
 
-Pode fugir usando ilus„o
-os premios podem ser ((A) dois encantos extras) ou ((B) 50 peÁas de ouro) ou ((C) Escudo de Armas Encantado, reduz em 2 a ForÁa de Ataque das criaturas)
-6 punhais (somente um È de verdade, que causa morte)
+Pode fugir usando ilus√£o
+os premios podem ser ((A) dois encantos extras) ou ((B) 50 pe√ßas de ouro) ou ((C) Escudo de Armas Encantado, reduz em 2 a For√ßa de Ataque das criaturas)
+6 punhais (somente um √© de verdade, que causa morte)
 oponente primeiro
-um dado, se der 6 È o punhal verdadeiro
+um dado, se der 6 √© o punhal verdadeiro
 
 
 

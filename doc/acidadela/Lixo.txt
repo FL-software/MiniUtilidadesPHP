@@ -1,8 +1,8 @@
 function acontecerIndice_item_escolha() {
-	var texto = "Você deve escolher um item:";
+	var texto = "VocÃª deve escolher um item:";
 	var i = 1;
 	if ($('.qtd-adaga').text() === 1) {
-		texto += " ("+i+") Adaga de Arremesso Encantada, causa 2 de dano automático";
+		texto += " ("+i+") Adaga de Arremesso Encantada, causa 2 de dano automÃ¡tico";
 		i++;
 	};
 	if ($('.qtd-prata').text() === 1) {
@@ -30,7 +30,7 @@ function acontecerIndice_item_escolha() {
 		i++;
 	};
 	if ($('.qtd-essencia').text() === 1) {
-		texto += " ("+i+") Essência de Erva de Porco";
+		texto += " ("+i+") EssÃªncia de Erva de Porco";
 		i++;
 	};
 	if ($('.qtd-amuleto').text() === 1) {
@@ -46,7 +46,7 @@ function acontecerIndice_item_escolha() {
 		i++;
 	};
 	if ($('.qtd-miriade').text() === 1) {
-		texto += " ("+i+") Miríade de Bolso";
+		texto += " ("+i+") MirÃ­ade de Bolso";
 		i++;
 	};
 	if ($('.qtd-cobre').text() === 1) {
@@ -62,7 +62,7 @@ function acontecerIndice_item_escolha() {
 		i++;
 	};
 	if ($('.qtd-espada1').text() === 1) {
-		texto += " ("+i+") Espada Mágica + 1";
+		texto += " ("+i+") Espada MÃ¡gica + 1";
 		i++;
 	};
 	if ($('.qtd-espada2').text() === 1) {
@@ -70,13 +70,13 @@ function acontecerIndice_item_escolha() {
 		i++;
 	};
 	if ($('.qtd-escudo').text() === 1) {
-		texto += " ("+i+") Escudo de Armas Encantado, -2 Força de Ataque das criaturas";
+		texto += " ("+i+") Escudo de Armas Encantado, -2 ForÃ§a de Ataque das criaturas";
 		i++;
 	}; 
 	var opcaoItem = prompt(texto);
 	switch (opcaoItem) {
     		case 1:
-			nomeItem = ""Adaga de Arremesso Encantada, causa 2 de dano automático";
+			nomeItem = ""Adaga de Arremesso Encantada, causa 2 de dano automÃ¡tico";
 			break;
     		case 2:
 			nomeItem = "Chave de Prata";
@@ -97,7 +97,7 @@ function acontecerIndice_item_escolha() {
 			nomeItem = "Escova de Cabelo Ornamentada";
 			break;
     		case 8:
-			nomeItem = "Essência de Erva de Porco";
+			nomeItem = "EssÃªncia de Erva de Porco";
 			break;
     		case 9:
 			nomeItem = "Amuleto Encantado";
@@ -109,7 +109,7 @@ function acontecerIndice_item_escolha() {
 			nomeItem = "Espelho de Prata";
 			break;
     		case 12:
-			nomeItem = "Miríade de Bolso";
+			nomeItem = "MirÃ­ade de Bolso";
 			break;
     		case 13:
 			nomeItem = "Chave de Cobre";
@@ -121,13 +121,13 @@ function acontecerIndice_item_escolha() {
 			nomeItem = "Espada Solar + 4";
 			break;
     		case 16:
-			nomeItem = "Espada Mágica + 1";
+			nomeItem = "Espada MÃ¡gica + 1";
 			break;
     		case 17:
 			nomeItem = "Espada Encantada + 2";
 			break;
     		default:
-			nomeItem = "Escudo de Armas Encantado, -2 Força de Ataque das criaturas";
+			nomeItem = "Escudo de Armas Encantado, -2 ForÃ§a de Ataque das criaturas";
 			break;
 	};
 	acontecerIndice_item(acaoItem,nomeItem)
@@ -147,7 +147,7 @@ $('.imgDados').show();
 
 	alert(indiceAnterior);
 	if (bloqueio === "sim"){
-		alert ("Você ficou no indice "+indiceDestino+", devido a não possuir item, ouro ou encanto necessário para prosseguir!");
+		alert ("VocÃª ficou no indice "+indiceDestino+", devido a nÃ£o possuir item, ouro ou encanto necessÃ¡rio para prosseguir!");
 	} else {
 		acontecerIndice(indiceDestino - 1);
 	};
@@ -158,7 +158,7 @@ HTML
 <li>lista ordenada</li>
 </ol>
 <ul>
-<li>lista não ordenada</li>
+<li>lista nÃ£o ordenada</li>
 </ul>
 <table>
  <thead>
