@@ -1,267 +1,267 @@
 const baralho = [
     {
         nome: "ADAM",
-        img: "../../img/ADAM.jpeg"
+        img: "../../img/herois/ADAM.jpeg"
     },
     {
         nome: "Andrew",
-        img: "../../img/Andrew.jpeg"
+        img: "../../img/herois/Andrew.jpeg"
     },
     {
         nome: "Anti ADAM",
-        img: "../../img/Anti ADAM.jpeg"
+        img: "../../img/herois/Anti ADAM.jpeg"
     },
     {
         nome: "Arakawa",
-        img: "../../img/Arakawa.jpeg"
+        img: "../../img/herois/Arakawa.jpeg"
     },
     {
         nome: "Argus",
-        img: "../../img/Argus.jpeg"
+        img: "../../img/herois/Argus.jpeg"
     },
     {
         nome: "Corvo Selvagem",
-        img: "../../img/Corvo Selvagem.jpeg"
+        img: "../../img/herois/Corvo Selvagem.jpeg"
     },
     {
         nome: "Demetrius1",
-        img: "../../img/Demetrius1.jpeg"
+        img: "../../img/herois/Demetrius1.jpeg"
     },
     {
         nome: "Demetrius2",
-        img: "../../img/Demetrius2.jpeg"
+        img: "../../img/herois/Demetrius2.jpeg"
     },
     {
         nome: "Dhallyon",
-        img: "../../img/Dhallyon.jpeg"
+        img: "../../img/herois/Dhallyon.jpeg"
     },
     {
         nome: "Dianna1",
-        img: "../../img/Dianna1.jpeg"
+        img: "../../img/herois/Dianna1.jpeg"
     },
     {
         nome: "Dianna2",
-        img: "../../img/Dianna2.jpeg"
+        img: "../../img/herois/Dianna2.jpeg"
     },
     {
         nome: "Fupert",
-        img: "../../img/Fupert.jpeg"
+        img: "../../img/herois/Fupert.jpeg"
     },
     {
         nome: "Jhon",
-        img: "../../img/Jhon.jpeg"
+        img: "../../img/herois/Jhon.jpeg"
     },
     {
         nome: "Kamui",
-        img: "../../img/Kamui.jpeg"
+        img: "../../img/herois/Kamui.jpeg"
     },
     {
         nome: "Kankar",
-        img: "../../img/Kankar.jpeg"
+        img: "../../img/herois/Kankar.jpeg"
     },
     {
         nome: "Ken",
-        img: "../../img/Ken.jpeg"
+        img: "../../img/herois/Ken.jpeg"
     },
     {
         nome: "Khalyon1",
-        img: "../../img/Khalyon1.jpeg"
+        img: "../../img/herois/Khalyon1.jpeg"
     },
     {
         nome: "Khalyon2",
-        img: "../../img/Khalyon2.jpeg"
+        img: "../../img/herois/Khalyon2.jpeg"
     },
     {
         nome: "Kheynnel",
-        img: "../../img/Kheynnel.jpeg"
+        img: "../../img/herois/Kheynnel.jpeg"
     },
     {
         nome: "Lawrence",
-        img: "../../img/Lawrence.jpeg"
+        img: "../../img/herois/Lawrence.jpeg"
     },
     {
         nome: "Malthus e Argus",
-        img: "../../img/Malthus e Argus.jpeg"
+        img: "../../img/herois/Malthus e Argus.jpeg"
     },
     {
         nome: "Malthus1",
-        img: "../../img/Malthus1.jpeg"
+        img: "../../img/herois/Malthus1.jpeg"
     },
     {
         nome: "Malthus2",
-        img: "../../img/Malthus2.jpeg"
+        img: "../../img/herois/Malthus2.jpeg"
     },
     {
         nome: "Miamoto",
-        img: "../../img/Miamoto.jpeg"
+        img: "../../img/herois/Miamoto.jpeg"
     },
     {
         nome: "Odgg",
-        img: "../../img/Odgg.jpeg"
+        img: "../../img/herois/Odgg.jpeg"
     },
     {
         nome: "Peter",
-        img: "../../img/Peter.jpeg"
+        img: "../../img/herois/Peter.jpeg"
     },
     {
         nome: "Shuuv1",
-        img: "../../img/Shuuv1.jpeg"
+        img: "../../img/herois/Shuuv1.jpeg"
     },
     {
         nome: "Shuvv2",
-        img: "../../img/Shuvv2.jpeg"
+        img: "../../img/herois/Shuvv2.jpeg"
     },
     {
         nome: "Smallsunshine",
-        img: "../../img/Smallsunshine.jpeg"
+        img: "../../img/herois/Smallsunshine.jpeg"
     },
     {
         nome: "Thanner",
-        img: "../../img/Thanner.jpeg"
+        img: "../../img/herois/Thanner.jpeg"
     },
     {
         nome: "Therfrem1",
-        img: "../../img/Therfrem1.jpeg"
+        img: "../../img/herois/Therfrem1.jpeg"
     },
     {
         nome: "Therfrem2",
-        img: "../../img/Therfrem2.jpeg"
+        img: "../../img/herois/Therfrem2.jpeg"
     },
     {
         nome: "Yahoo",
-        img: "../../img/Yahoo.jpeg"
+        img: "../../img/herois/Yahoo.jpeg"
     },
     {
         nome: "ADAM",
-        img: "../../img/ADAM.jpeg"
+        img: "../../img/herois/ADAM.jpeg"
     },
     {
         nome: "Andrew",
-        img: "../../img/Andrew.jpeg"
+        img: "../../img/herois/Andrew.jpeg"
     },
     {
         nome: "Anti ADAM",
-        img: "../../img/Anti ADAM.jpeg"
+        img: "../../img/herois/Anti ADAM.jpeg"
     },
     {
         nome: "Arakawa",
-        img: "../../img/Arakawa.jpeg"
+        img: "../../img/herois/Arakawa.jpeg"
     },
     {
         nome: "Argus",
-        img: "../../img/Argus.jpeg"
+        img: "../../img/herois/Argus.jpeg"
     },
     {
         nome: "Corvo Selvagem",
-        img: "../../img/Corvo Selvagem.jpeg"
+        img: "../../img/herois/Corvo Selvagem.jpeg"
     },
     {
         nome: "Demetrius1",
-        img: "../../img/Demetrius1.jpeg"
+        img: "../../img/herois/Demetrius1.jpeg"
     },
     {
         nome: "Demetrius2",
-        img: "../../img/Demetrius2.jpeg"
+        img: "../../img/herois/Demetrius2.jpeg"
     },
     {
         nome: "Dhallyon",
-        img: "../../img/Dhallyon.jpeg"
+        img: "../../img/herois/Dhallyon.jpeg"
     },
     {
         nome: "Dianna1",
-        img: "../../img/Dianna1.jpeg"
+        img: "../../img/herois/Dianna1.jpeg"
     },
     {
         nome: "Dianna2",
-        img: "../../img/Dianna2.jpeg"
+        img: "../../img/herois/Dianna2.jpeg"
     },
     {
         nome: "Fupert",
-        img: "../../img/Fupert.jpeg"
+        img: "../../img/herois/Fupert.jpeg"
     },
     {
         nome: "Jhon",
-        img: "../../img/Jhon.jpeg"
+        img: "../../img/herois/Jhon.jpeg"
     },
     {
         nome: "Kamui",
-        img: "../../img/Kamui.jpeg"
+        img: "../../img/herois/Kamui.jpeg"
     },
     {
         nome: "Kankar",
-        img: "../../img/Kankar.jpeg"
+        img: "../../img/herois/Kankar.jpeg"
     },
     {
         nome: "Ken",
-        img: "../../img/Ken.jpeg"
+        img: "../../img/herois/Ken.jpeg"
     },
     {
         nome: "Khalyon1",
-        img: "../../img/Khalyon1.jpeg"
+        img: "../../img/herois/Khalyon1.jpeg"
     },
     {
         nome: "Khalyon2",
-        img: "../../img/Khalyon2.jpeg"
+        img: "../../img/herois/Khalyon2.jpeg"
     },
     {
         nome: "Kheynnel",
-        img: "../../img/Kheynnel.jpeg"
+        img: "../../img/herois/Kheynnel.jpeg"
     },
     {
         nome: "Lawrence",
-        img: "../../img/Lawrence.jpeg"
+        img: "../../img/herois/Lawrence.jpeg"
     },
     {
         nome: "Malthus e Argus",
-        img: "../../img/Malthus e Argus.jpeg"
+        img: "../../img/herois/Malthus e Argus.jpeg"
     },
     {
         nome: "Malthus1",
-        img: "../../img/Malthus1.jpeg"
+        img: "../../img/herois/Malthus1.jpeg"
     },
     {
         nome: "Malthus2",
-        img: "../../img/Malthus2.jpeg"
+        img: "../../img/herois/Malthus2.jpeg"
     },
     {
         nome: "Miamoto",
-        img: "../../img/Miamoto.jpeg"
+        img: "../../img/herois/Miamoto.jpeg"
     },
     {
         nome: "Odgg",
-        img: "../../img/Odgg.jpeg"
+        img: "../../img/herois/Odgg.jpeg"
     },
     {
         nome: "Peter",
-        img: "../../img/Peter.jpeg"
+        img: "../../img/herois/Peter.jpeg"
     },
     {
         nome: "Shuuv1",
-        img: "../../img/Shuuv1.jpeg"
+        img: "../../img/herois/Shuuv1.jpeg"
     },
     {
         nome: "Shuvv2",
-        img: "../../img/Shuvv2.jpeg"
+        img: "../../img/herois/Shuvv2.jpeg"
     },
     {
         nome: "Smallsunshine",
-        img: "../../img/Smallsunshine.jpeg"
+        img: "../../img/herois/Smallsunshine.jpeg"
     },
     {
         nome: "Thanner",
-        img: "../../img/Thanner.jpeg"
+        img: "../../img/herois/Thanner.jpeg"
     },
     {
         nome: "Therfrem1",
-        img: "../../img/Therfrem1.jpeg"
+        img: "../../img/herois/Therfrem1.jpeg"
     },
     {
         nome: "Therfrem2",
-        img: "../../img/Therfrem2.jpeg"
+        img: "../../img/herois/Therfrem2.jpeg"
     },
     {
         nome: "Yahoo",
-        img: "../../img/Yahoo.jpeg"
+        img: "../../img/herois/Yahoo.jpeg"
     },
     {
         nome: "Burro",
