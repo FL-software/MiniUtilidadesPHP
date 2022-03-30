@@ -1,0 +1,27 @@
+audio {
+    display: none;
+}
+
+
+#relogio {
+    position: absolute;
+    height: 400px;
+    width: 400px;
+    top: 100px;    
+}
+
+#ponteiro-hora {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    top: 203px;
+    left: 106px;
+}
+
+#ponteiro-minuto {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 151px;
+    left: 60px;    
+}
