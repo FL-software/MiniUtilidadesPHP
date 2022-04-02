@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../../css/all.css">
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+        </style>
+        <title>FL Software - Mini Utilidades - Lutadores</title>
+    </head>
+    <body>
+        <h1>Lutadores</h1>
+        <!--Div Conteiner Vermelho-->
+        <div style="position: relative; display: inline-block;">
+            <!--Div Conteiner Vermelho menor-->
+            <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px">
+                <!--Vida Jogador A-->
+                <div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
+                    <div style="background-color: yellow; height: 30px; width: 100%;"></div>
+                    <div id="vidaJogadorA" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+                </div>
+                <!--Tempo-->
+                <div id="tempo" style="background-color: red; height: 100px; width: 100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">
+                    10
+                </div>
+                <!--Vida Jogador B-->
+                <div style="position: relative; height: 30px; width: 100%;">
+                    <div style="background-color: yellow; height: 30px;"></div>
+                    <div id="vidaJogadorB" style="position: absolute; background: blue; top: 0; right: 0; bottom: 0; left: 0"></div>
+                </div>
+            </div>
+            <div id="mensagem" style="position: absolute; color: white; display: none; align-items: center; justify-content: center; top: 0; right: 0; bottom: 0; left: 0;"></div>
+            <canvas></canvas>
+        </div>
+        <h2>Jogador A</h2>
+        <p>Tecla W = Pula</p>
+        <p>Tecla A = Anda para Esquerda</p>
+        <p>Tecla D = Anda para Direita</p>
+        <p>Tecla V = Ataque</p>
+        <h2>Jogador B</h2>
+        <p>Seta para Cima = Pula</p>
+        <p>Seta para Esquerda = Anda para Esquerda</p>
+        <p>Seta para Direita = Anda para Direita</p>
+        <p>0 = Ataque</p>
+        <script src="../../js/jogos/lutadores.js"></script>
+    </body>
+</html>
