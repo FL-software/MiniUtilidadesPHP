@@ -279,3 +279,7 @@ window.addEventListener('keyup', (event) => {
             break
     }
 })
+
+function reiniciar() {
+    window.location.reload();
+}

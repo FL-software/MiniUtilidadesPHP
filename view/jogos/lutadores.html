@@ -5,41 +5,35 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../../css/all.css">
+        <link rel="stylesheet" href="../../css/jogos/lutadores.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-        <style>
-            * {
-                box-sizing: border-box;
-            }
-            div {                
-                font-family: 'Press Start 2P', cursive;
-            }
-        </style>
         <title>FL Software - Mini Utilidades - Lutadores</title>
     </head>
     <body>
         <h1>Lutadores</h1>
         <!--Div Conteiner Vermelho-->
-        <div style="position: relative; display: inline-block;">
+        <div id="resultado">
             <!--Div Conteiner Vermelho menor-->
-            <div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px">
+            <div id="resultado_interno">
                 <!--Vida Jogador A-->
-                <div style="position: relative; width: 100%; display: flex; justify-content: flex-end; border-top: 4px solid white; border-left: 4px solid white; border-bottom: 4px solid white;">
-                    <div style="background-color: red; height: 30px; width: 100%;"></div>
-                    <div id="vidaJogadorA" style="position: absolute; background: #818CF8; top: 0; right: 0; bottom: 0; width: 100%;"></div>
+                <div id="barra_jogadorA">
+                    <div id="fundo_barra_jogadorA"></div>
+                    <div id="vidaJogadorA"></div>
                 </div>
                 <!--Tempo-->
-                <div id="tempo" style="background-color: black; height: 50px; width: 100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: white;  border: 4px solid white;"></div>
+                <div id="tempo"></div>
                 <!--Vida Jogador B-->
-                <div style="position: relative; width: 100%;  border-top: 4px solid white; border-right: 4px solid white; border-bottom: 4px solid white;">
-                    <div style="background-color: red; height: 30px;"></div>
-                    <div id="vidaJogadorB" style="position: absolute; background: #818CF8; top: 0; right: 0; bottom: 0; left: 0"></div>
+                <div id="barra_jogadorB">
+                    <div id="fundo_barra_jogadorB"></div>
+                    <div id="vidaJogadorB"></div>
                 </div>
             </div>
-            <div id="mensagem" style="position: absolute; color: darkred; display: none; align-items: center; justify-content: center; top: 0; right: 0; bottom: 0; left: 0;"></div>
+            <div id="mensagem"></div>
             <canvas></canvas>
         </div>
+        <div id="reiniciar" onclick="reiniciar();">Reiniciar</div>
         <h2>Jogador A</h2>
         <p>Tecla W = Pula</p>
         <p>Tecla A = Anda para Esquerda</p>

@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+}
+
+div {                
+    font-family: 'Press Start 2P', cursive;
+}
+
+#reiniciar {
+    width: 100px;
+    height: 50px;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    background-color: #d40b46;
+    color: #fff;
+    border: 4px solid #58207e;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#resultado {
+    position: relative;
+    display: inline-block;
+}
+
+#resultado_interno {
+    position: absolute; 
+    display: flex; 
+    width: 100%; 
+    align-items: center; 
+    padding: 20px;
+}
+
+#barra_jogadorA {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 4px solid white;
+    border-left: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#fundo_barra_jogadorA {
+    background-color: red;
+    height: 30px;
+    width: 100%;
+}
+
+#vidaJogadorA {
+    position: absolute;
+    background: #818CF8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#tempo {
+    background-color: black;
+    height: 50px;
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 4px solid white;
+}
+
+#barra_jogadorB {
+    position: relative;
+    width: 100%;
+    border-top: 4px solid white;
+    border-right: 4px solid white;
+    border-bottom: 4px solid white;
+}
+
+#fundo_barra_jogadorB {
+    background-color: red;
+    height: 30px;
+}
+
+#vidaJogadorB {
+    position: absolute;
+    background: #818CF8;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#mensagem {
+    position: absolute;
+    color: darkred;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
