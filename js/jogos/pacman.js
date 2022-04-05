@@ -198,17 +198,6 @@ const inimigos = [
             y: 0
         },
         cor: 'pink'
-    }),
-    new Inimigo({
-        posicao: {
-            x: Fronteira.largura * 9 + Fronteira.largura / 2,
-            y: Fronteira.altura * 11 + Fronteira.altura / 2
-        },
-        velocidade: {
-            x: -Inimigo.aceleracao,
-            y: 0
-        },
-        cor: 'pink'
     })
 ]
 const teclas = {
@@ -802,3 +791,7 @@ addEventListener('keyup', ({key}) => {
 
     //console.log("Velocidade Jogador: " + jogador.velocidade)
 })
+
+function reiniciar() {
+    window.location.reload();
+}
