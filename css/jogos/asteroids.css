@@ -1,0 +1,12 @@
+body {
+    margin: 0;
+    background: black;
+    overflow: hidden;
+}
+
+#titulo {    
+    font-size: 2em;    
+    font-family: 'ZenAntique-Regular';    
+    font-weight: bold;
+    color: white;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css">
+        <link rel="stylesheet" href="../../css/all.css">
+        <link rel="stylesheet" href="../../css/jogos/asteroids.css">
+        <title>FL Software - Mini Utilidades - Asteroids</title>
+    </head>
+    <body>
+        <h1 class="select-none" id="titulo">Asteroids</h1>
+        <div>
+            <div class="fixed text-white text-sm ml-2 mt-1 select-none"><span>Pontos: </span><span id="placar">0</span></div>
+            <div class="fixed inset-0 flex items-center justify-center" id="modal">
+                <div class="bg-white max-w-md w-full p-6 text-center">
+                    <h1 class="text-4xl font-bold leading-none" id="placarFinal">0</h1>
+                    <p class="text-sm text-gray-700 mb-4">Pontos</p>
+                    <div>
+                        <button class="bg-blue-500 text-white w-full py-3 rounded-full text-sm" id="iniciarJogo">Iniciar Jogo</button>
+                    </div>
+                </div>
+            </div>
+            <canvas></canvas>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" integrity="sha512-kVlGhj2qFy+KBCFuvjBJTGUMxbdqJKs4yK2jh0e0VPhWUPiPC87bzm4THmaaIee3Oj7j6sDpTTgm2EPPiESqBg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="../../js/jogos/asteroids.js"></script>
+    </body>
+</html>
