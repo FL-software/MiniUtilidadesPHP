@@ -123,7 +123,7 @@ const x = canvas.width / 2
 const y = canvas.height / 2
 
 let jogador = new Jogador(x, y, 10, 'white')
-let projetis = []
+let projeteis = []
 let inimigos = []
 let particulas = []
 let animacaoId
@@ -131,7 +131,7 @@ let pontos = 0
 
 function iniciar() {
     jogador = new Jogador(x, y, 10, 'white')
-    projetis = []
+    projeteis = []
     inimigos = []
     particulas = []
     pontos = 0
@@ -185,7 +185,7 @@ function animar() {
         }
     })
 
-    projetis.forEach((projetil, projetilIndice) => {
+    projeteis.forEach((projetil, projetilIndice) => {
         projetil.atualizar()
 
         //remove projetil por sair dos limites da tela
@@ -195,7 +195,7 @@ function animar() {
             || projetil.y - projetil.raio > canvas.height
         ) {
             setTimeout(() =>{
-                projetis.splice(projetilIndice, 1)
+                projeteis.splice(projetilIndice, 1)
             }, 0)
         }
     })
@@ -216,7 +216,7 @@ function animar() {
            placarFinal.innerHTML = pontos
         }
 
-        projetis.forEach((projetil, projetilIndice) => {
+        projeteis.forEach((projetil, projetilIndice) => {
             const distancia = Math.hypot(projetil.x - inimigo.x, projetil.y - inimigo.y)
 
             //console.log('distancia entre projetil e inimigo: ' + distancia)
@@ -250,7 +250,7 @@ function animar() {
                     })
 
                     setTimeout(() =>{
-                        projetis.splice(projetilIndice, 1)
+                        projeteis.splice(projetilIndice, 1)
                     }, 0)
                 } else {
                     //remove da cena totalmente
@@ -259,7 +259,7 @@ function animar() {
 
                     setTimeout(() =>{
                         inimigos.splice(inimigoIndice, 1)
-                        projetis.splice(projetilIndice, 1)
+                        projeteis.splice(projetilIndice, 1)
                     }, 0)
                 }
             }
@@ -269,7 +269,7 @@ function animar() {
 
 
 addEventListener('click', (event) =>{
-    //console.log(projetis)
+    //console.log(projeteis)
     //console.log("clique X: " + event.clientX)
     //console.log("clique Y: " + event.clientY)
 
@@ -284,7 +284,7 @@ addEventListener('click', (event) =>{
         y: Math.sin(angulo) * 5
     }
 
-    projetis.push(
+    projeteis.push(
         new Projetil(canvas.width / 2, canvas.height / 2, 5, 'white', velocidade)
     )
 })
