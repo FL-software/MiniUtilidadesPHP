@@ -1,0 +1,10 @@
+body {
+    background-color: black;
+}
+
+#titulo {    
+    font-size: 2em;    
+    font-family: 'ZenAntique-Regular';    
+    font-weight: bold;
+    color: white;
+}
