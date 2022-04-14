@@ -9,7 +9,7 @@ class Fronteira {
     }
 
     desenhar() {
-        contexto.fillStyle = 'rgba(255, 0 , 0, 0.0)'
+        contexto.fillStyle = 'rgba(255, 0 , 0, 0.5)'
         contexto.fillRect (this.posicao.x, this.posicao.y, this.largura, this.altura)
     }
 }

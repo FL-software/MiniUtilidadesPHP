@@ -15,6 +15,14 @@ for (let i = 0; i < colisoes.length; i += 70) {
 }
 //console.log(mapaColisoes)
 
+const mapaZonasDeBatalha = []
+
+for (let i = 0; i < dadosZonasDeBatalha.length; i += 70) {
+    //console.log(dadosZonasDeBatalha.slice(i, 70 + i))
+    mapaZonasDeBatalha.push(dadosZonasDeBatalha.slice(i, 70 + i))
+}
+//console.log(mapaZonasDeBatalha)
+
 const fronteiras = []
 const deslocamento = {
     x: -735,
@@ -27,6 +35,23 @@ mapaColisoes.forEach((linha, i) => {
 
         if (simbolo === 1025) {
             fronteiras.push(new Fronteira({
+                posicao: {
+                    x: j * Fronteira.largura + deslocamento.x,
+                    y: i * Fronteira.altura + deslocamento.y
+                }
+            }))
+        }
+    })
+})
+
+const zonasDeBatalha = []
+
+mapaZonasDeBatalha.forEach((linha, i) => {
+    linha.forEach((simbolo, j) => {
+        //console.log (simbolo)
+
+        if (simbolo === 1025) {
+            zonasDeBatalha.push(new Fronteira({
                 posicao: {
                     x: j * Fronteira.largura + deslocamento.x,
                     y: i * Fronteira.altura + deslocamento.y
@@ -102,7 +127,7 @@ const teclas = {
 //    }    
 //})
 
-const moveis = [mapa, primeroPlano, ...fronteiras]
+const moveis = [mapa, primeroPlano, ...fronteiras, ...zonasDeBatalha]
 
 function colisaoRetangulo({retangulo1, retangulo2}) {
     return (retangulo1.posicao.x + retangulo1.largura >= retangulo2.posicao.x
@@ -111,9 +136,14 @@ function colisaoRetangulo({retangulo1, retangulo2}) {
         && retangulo1.posicao.y + retangulo1.altura >= retangulo2.posicao.y)
 }
 
+const batalha = {
+    iniciada: false
+}
+
 function animar() {
-    requestAnimationFrame(animar)
-    //console.log('animado')
+    const animacaoId = requestAnimationFrame(animar)
+    //console.log(animacaoId)
+    //console.log("animação do mapa")
 
     mapa.desenhar()
 
@@ -123,6 +153,10 @@ function animar() {
         fronteira.desenhar()
     })
 
+    zonasDeBatalha.forEach(zonaDeBatalha => {
+        zonaDeBatalha.desenhar()
+    })
+
     jogador.desenhar()
 
     primeroPlano.desenhar()
@@ -130,6 +164,62 @@ function animar() {
     let movimentando = true
     
     jogador.movimentando = false
+
+    if (batalha.iniciada) return
+
+    //ativa a batalha
+    if (teclas.w.pressionado || teclas.a.pressionado || teclas.s.pressionado || teclas.d.pressionado) {
+        for (let i = 0; i < zonasDeBatalha.length; i++) {
+            const zonaDeBatalha = zonasDeBatalha[i]
+            const areaSobreposicao = 
+                (Math.min(
+                    jogador.posicao.x + jogador.largura, 
+                    zonaDeBatalha.posicao.x + zonaDeBatalha.largura
+                ) - Math.max(jogador.posicao.x, zonaDeBatalha.posicao.x))
+                * (Math.min(
+                    jogador.posicao.y + jogador.altura,
+                    zonaDeBatalha.posicao.y + zonaDeBatalha.altura
+                ) - Math.max(jogador.posicao.y, zonaDeBatalha.posicao.y))
+            //console.log(areaSobreposicao)
+
+            if (colisaoRetangulo({
+                    retangulo1: jogador, 
+                    retangulo2: zonaDeBatalha
+                }) 
+                && areaSobreposicao > (jogador.largura * jogador.altura) / 2
+                && Math.random() < 0.01
+            ) {
+                //console.log('ativar a batalha')
+                //desativa o ciclo de animação atual
+                cancelAnimationFrame(animacaoId)
+
+                batalha.iniciada = true
+
+                gsap.to('#divSobreposto', {
+                    opacity: 1,
+                    repeat: 3,
+                    yoyo: true,
+                    duration: 0.4,
+                    onComplete() {
+                        gsap.to('#divSobreposto', {
+                            opacity: 1,
+                            duration: 0.4,
+                            onComplete() {
+                                //ativa um novo ciclo de animação
+                                animarBatalha()
+
+                                gsap.to('#divSobreposto', {
+                                    opacity: 0,
+                                    duration: 0.4,
+                                })
+                            }
+                        })
+                    }
+                })
+                break
+            }
+        }
+    }
 
     if (teclas.w.pressionado && ultimaTecla === 'w') {
         jogador.movimentando = true
@@ -146,7 +236,7 @@ function animar() {
                     }}
                 })
             ) {
-                //console.log('colidindo')
+                //console.log('colidindo fronteira')
                 movimentando = false
                 break
             }
@@ -172,7 +262,7 @@ function animar() {
                     }}
                 })
             ) {
-                //console.log('colidindo')
+                //console.log('colidindo fronteira')
                 movimentando = false
                 break
             }
@@ -198,7 +288,7 @@ function animar() {
                     }}
                 })
             ) {
-                //console.log('colidindo')
+                //console.log('colidindo fronteira')
                 movimentando = false
                 break
             }
@@ -224,7 +314,7 @@ function animar() {
                     }}
                 })
             ) {
-                //console.log('colidindo')
+                //console.log('colidindo fronteira')
                 movimentando = false
                 break
             }
@@ -238,7 +328,27 @@ function animar() {
     }
 }
 
-animar()
+//animar()
+
+const imagemFundoDeTelaBatalha = new Image()
+imagemFundoDeTelaBatalha.src ='../../img/pokemonClone/battleBackground.png'
+
+const fundoDeTelaBatalha = new Objeto({
+    posicao: {
+        x: 0,
+        y: 0
+    },
+    imagem: imagemFundoDeTelaBatalha
+})
+
+function animarBatalha() {
+    requestAnimationFrame(animarBatalha)
+    //console.log("animação de batalha")
+
+    fundoDeTelaBatalha.desenhar()
+}
+
+animarBatalha()
 
 let ultimaTecla = ''
 
