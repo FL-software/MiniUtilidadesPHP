@@ -87,7 +87,8 @@ const jogador = new Objeto({
     },
     imagem: imagemJogadorBaixo,
     molduras: {
-        maximo: 4
+        maximo: 4,
+        espera: 10
     },
     imagens: {
         cima: imagemJogadorCima,
@@ -163,7 +164,7 @@ function animar() {
 
     let movimentando = true
     
-    jogador.movimentando = false
+    jogador.animado = false
 
     if (batalha.iniciada) return
 
@@ -193,6 +194,10 @@ function animar() {
                 //desativa o ciclo de animação atual
                 cancelAnimationFrame(animacaoId)
 
+                audio.mapa.stop()
+                audio.inicioBatalha.play()
+                audio.batalha.play()
+
                 batalha.iniciada = true
 
                 gsap.to('#divSobreposto', {
@@ -206,6 +211,7 @@ function animar() {
                             duration: 0.4,
                             onComplete() {
                                 //ativa um novo ciclo de animação
+                                iniciarBatalha()
                                 animarBatalha()
 
                                 gsap.to('#divSobreposto', {
@@ -222,7 +228,7 @@ function animar() {
     }
 
     if (teclas.w.pressionado && ultimaTecla === 'w') {
-        jogador.movimentando = true
+        jogador.animado = true
         jogador.imagem = jogador.imagens.cima
 
         for (let i = 0; i < fronteiras.length; i++) {
@@ -248,7 +254,7 @@ function animar() {
             })
         }
     } else if (teclas.a.pressionado && ultimaTecla === 'a') {
-        jogador.movimentando = true
+        jogador.animado = true
         jogador.imagem = jogador.imagens.esquerda
 
         for (let i = 0; i < fronteiras.length; i++) {
@@ -274,7 +280,7 @@ function animar() {
             })
         }
     } else if (teclas.s.pressionado && ultimaTecla === 's') {
-        jogador.movimentando = true
+        jogador.animado = true
         jogador.imagem = jogador.imagens.baixo
 
         for (let i = 0; i < fronteiras.length; i++) {
@@ -300,7 +306,7 @@ function animar() {
             })
         }
     } else if (teclas.d.pressionado && ultimaTecla === 'd') {
-        jogador.movimentando = true
+        jogador.animado = true
         jogador.imagem = jogador.imagens.direita
 
         for (let i = 0; i < fronteiras.length; i++) {
@@ -327,28 +333,6 @@ function animar() {
         }
     }
 }
-
-//animar()
-
-const imagemFundoDeTelaBatalha = new Image()
-imagemFundoDeTelaBatalha.src ='../../img/pokemonClone/battleBackground.png'
-
-const fundoDeTelaBatalha = new Objeto({
-    posicao: {
-        x: 0,
-        y: 0
-    },
-    imagem: imagemFundoDeTelaBatalha
-})
-
-function animarBatalha() {
-    requestAnimationFrame(animarBatalha)
-    //console.log("animação de batalha")
-
-    fundoDeTelaBatalha.desenhar()
-}
-
-animarBatalha()
 
 let ultimaTecla = ''
 
@@ -400,4 +384,13 @@ addEventListener('keyup', (e) => {
             break
     }
     //console.log(teclas)
+})
+
+let clicado = false
+
+addEventListener('click', () => {
+    if (!clicado) {
+        audio.mapa.play()
+        clicado = true
+    }
 })

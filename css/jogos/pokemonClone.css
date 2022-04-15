@@ -1,5 +1,23 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
 body {
     background-color: black;
+}
+
+h1 {
+    margin: 0;
+}
+
+button {
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ddd;
 }
 
 #titulo {    
@@ -23,4 +41,5 @@ body {
     left: 0; 
     opacity: 0; 
     pointer-events: none;
+    z-index: 10;
 }
